@@ -204,20 +204,20 @@
 
             <ul class="list-unstyled components">
                 <li style="color: white;">
-                    <a href="/proyectos/clinicaProyecto/views/inicio.php">Inicio</a>
+                    <a href="/proyectos/clinicaAdminTec/views/inicio.php">Inicio</a>
                 </li>
                 <li class="active">
                     <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Citas</a>
                     <ul class="collapse list-unstyled" id="homeSubmenu">
-                        <li> <a href="/proyectos/clinicaProyecto/views/citas/citas.php">Solicitar Cita</a> </li>
-                        <li> <a href="/proyectos/clinicaProyecto/views/citas/detalleCita.php">Consultar Cita</a> </li>
+                        <li> <a href="/proyectos/clinicaAdminTec/views/citas/citas.php">Solicitar Cita</a> </li>
+                        <li> <a href="/proyectos/clinicaAdminTec/views/citas/detalleCita.php">Consultar Cita</a> </li>
                     </ul>
                 </li>
                 <li class="active">
                     <a href="#homeSubmenu2" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Tienda</a>
                     <ul class="collapse list-unstyled" id="homeSubmenu2">
-                        <li> <a href="/proyectos/clinicaProyecto/tienda/index.php">Comprar Productos</a> </li>
-                        <li> <a href="/proyectos/clinicaProyecto/tienda/detalleCita.php">Consultar Productos</a> </li>
+                        <li> <a href="/proyectos/clinicaAdminTec/tienda/index.php">Comprar Productos</a> </li>
+                        <li> <a href="/proyectos/clinicaAdminTec/tienda/detalleCita.php">Consultar Productos</a> </li>
                     </ul>
                 </li>
                
