@@ -1,51 +1,38 @@
 <?php
 
-//abrimos la sesión
 ob_start();
 session_start();
- 
-//Si la variable sesión está vacía
-if (!isset($_SESSION['administrador'])) 
-{ 
-  
 
-    if (!isset($_SESSION['usuario'])) 
-        { 
-            /* nos envía a la siguiente dirección en el caso de no poseer autorización */
-            header("location:../index.php"); 
-
+if(!isset($_SESSION['administrador'])){
+    
+    if (!isset($_SESSION['usuario'])){ 
+            header("location:../index.php");
     }
-
 }
 
-
 ?>
+
 <head>
     <title>Inicio</title>
     <link rel="icon" type="image/png" href="imgs\inicio.png" />
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS v5.0.2 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 
 <body background="../imgs/fondoUsuarios.jpg" style="background-size: cover; margin: 0px; height: 100%;">
-     <?php 
+    <?php 
         include('cabecera.php');   
     ?>
     <br><br>
     <font color="black">
-        <div class="container" style="margin-top: 10px; margin-right: 20px; margin-bottom: 10px; margin-left: 20px;">
+        <div style="margin-top: 10px; margin-right: 20px; margin-bottom: 10px; margin-left: 20px;">
             <div class="text-center">
                 <font size=7 color="black" face="Arial Black">
-                    Desarrollo Web - Grupo#4
+                    Administración de Tecnologías - Grupo#2
                 </font>
             </div>
-            <br>
-            <br>
-
+            <br><br>
             <div class="text-justify">
                 <font size=3 color="black" face="Arial Black">
                     <div class="row" style="align-items: center;">
@@ -70,69 +57,80 @@ if (!isset($_SESSION['administrador']))
                                     <td>Johan Estuardo Carrillo Berducido</td>
                                 </tr>
                                 <tr>
-                                    <td>1290-18-14588</td>
+                                    <td>1290-18-23967</td>
                                     <td>-----</td>
-                                    <td>Allan Rai Yunyor Acan Sacarias</td>
+                                    <td>Jhensser Andreé Aguirre Galdámez</td>
                                 </tr>
                                 <tr>
-                                    <td>1290-18-14609</td>
+                                    <td>1290-18-5747</td>
                                     <td>-----</td>
-                                    <td>Jose Pablo Mijangos de la Cruz</td>
+                                    <td>Mario Haroldo Sinay Gaytán</td>
                                 </tr>
                                 <tr>
-                                    <td>1290-18-16675</td>
+                                    <td>1290-18-17071</td>
                                     <td>-----</td>
-                                    <td>Julio Saúl Ramos Chacón</td>
+                                    <td>Jorge Luis Muñoz Elías</td>
                                 </tr>
                             </table>
                         </div>
                         <div class="col-md-6">
-                            <img src="../imgs/desarrolladorWeb.png" height="90%" width="90%">
+                            <img src="../imgs/adminTecs.png" height="90%" width="90%">
                         </div>
                     </div>
                     <br>
                     <div align="justify">
-                        Este es el proyecto del curso de Desarrollo Web del Octavo semestre de Ingeniería en Sistemas de la Universidad Mariano Gálvez de Guatemala, 
+                        Este es el proyecto del curso de Administración de Tecnologías del noveno semestre de Ingeniería en Sistemas de la Universidad Mariano Gálvez de Guatemala, 
                         el cual consta de la elaboración de una Clinica Privada que permita la compra de productos medicinales y creación de citas médicas para pacientes 
-                        con distintas enfermedades. Así mismo permite llevar el control y mantenimiento CRUD de Empleados (Doctores, enfermeros, etc.), Clientes/Pacientes, 
-                        Habitaciones reservadas o libres, Medicamento para venta y/o consumo y Usuarios. 
+                        con distintas enfermedades. Así mismo, del lado administrativo, permite llevar el control y mantenimiento CRUD de:
+                        <ol>
+                            <li>Usuarios</li>
+                            <li>Empleados (Doctores, enfermeros, etc.)</li>
+                            <li>Clientes / Pacientes</li>
+                            <li>Historial médico del paciente</li>
+                            <li>Citas médicas</li>
+                            <li>Medicamento</li>
+                            <li>Sucursales</li>
+                        </ol>
                     </div>
                 </font>
             </div>
             <br>
             <br>
-
             <div class="row">
                 <div class="col-md-4">
-                    <a href="../tienda" style="text-decoration: none; color: black">
+                    <!-- ../tienda -->
+                    <a href="#" style="text-decoration: none; color: black">
                         <div class="container" align="justify" style="background-color: #C1DDE7; width: 100%; border: solid; border-color: black;">
                             <div class="text-center">
                                 <b><font size=5 face="Times New Roman" color="gray">COMPRAR MEDICAMENTO</font></b>
                                 <img src="../imgs/medicamento.jpg" width="90%" class="card-img-top" style="border: solid">
                             </div>
-                            <p align="center" style="margin-top: 2em;"><i>
-                                ¡Visita nuestra tienda!<br>
-                                Contamos con todo tipo de producto medicinal para tu salud.
-                            </i></p>
+                            <p align="center" style="margin-top: 2em;">
+                                <i>
+                                    ¡Visita nuestra tienda!<br>
+                                    Contamos con todo tipo de producto medicinal para tu salud.
+                                </i>
+                            </p>
                         </div>
                     </a>
                 </div>
-
                 <div class="col-md-4">
-                    <a href="citas/citas.php" style="text-decoration: none; color: black">
+                    <!-- citas/citas.php -->
+                    <a href="#" style="text-decoration: none; color: black">
                         <div class="container" align="justify" style="background-color: #C1DDE7; width: 100%; border: solid; border-color: black;">
                             <div class="text-center">
                                 <b><font size=5 face="Times New Roman" color="gray">CREAR CITA</font></b>
                                 <img src="../imgs/citaMedica.png" width="90%" class="card-img-top" style="border: solid; width: 90%">
                             </div>
-                            <p align="center"><i>
-                                ¡Crea una cita médica!<br>
-                                Tenemos a los mejores médicos especialistas en distintas ramas.
-                            </i></p>
+                            <p align="center">
+                                <i>
+                                    ¡Crea una cita médica!<br>
+                                    Tenemos a los mejores médicos especialistas en distintas ramas.
+                                </i>
+                            </p>
                         </div>
                     </a>
                 </div>
-                
                 <div class="col-md-4">
                     <a href="#" style="text-decoration: none; color: black">
                         <div class="container" align="justify" style="background-color: #C1DDE7; width: 100%; border: solid; border-color: black;">
@@ -140,15 +138,15 @@ if (!isset($_SESSION['administrador']))
                                 <b><font size=5 face="Times New Roman" color="gray">NOSOTROS</font></b>
                                 <img src="../imgs/equipoTrabajo.png" width="90%" class="card-img-top" style="border: solid;">
                             </div>
-                            <p align="center"><i>
-                                ¡Conoce al equipo de desarrollo!<br>
-                                Conoce a los desarrolladores del sistema, cursantes del octavo semestre de Ingeniería en Sistemas.
-                            </i></p>
+                            <p align="center">
+                                <i>
+                                    ¡Conoce al equipo de desarrollo!<br>
+                                    Conoce a los desarrolladores del sistema, cursantes del noveno semestre de Ingeniería en Sistemas.
+                                </i>
+                            </p>
                         </div>
                     </a>
                 </div>
-
-
             </div>
             <br>
         </div>

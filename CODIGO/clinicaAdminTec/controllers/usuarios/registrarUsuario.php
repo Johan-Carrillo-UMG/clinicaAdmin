@@ -8,12 +8,11 @@
 	$txt_apellidos = utf8_decode($_POST["txt_apellidos"]);
 	$txt_password = utf8_decode($_POST["txt_password"]);
 
-	$sqlInsertUser =  "INSERT INTO id17547686_db_clinicaproyecto_2021.usuarios(email, nombres, apellidos, password, id_rol) 
-						VALUES ('".$txt_email."', '".$txt_nombres."', '".$txt_apellidos."', '".$txt_password."', 4)";
+	$sqlInsertUser =  "INSERT INTO dbclinicaadmin.usuarios(email, nombres, apellidos, password, id_rol) 
+						VALUES ('".$txt_email."', '".$txt_nombres."', '".$txt_apellidos."', '".$txt_password."', 3)";
 	
 	if($db_conexionUInsert->query($sqlInsertUser)==true){
 		$db_conexionUInsert -> close();
-
 		header("Location: ./");
 		ob_end_flush();
 	}
