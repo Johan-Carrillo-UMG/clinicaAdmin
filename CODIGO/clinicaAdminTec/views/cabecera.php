@@ -209,7 +209,7 @@
 
 
 <?php 
-    if (!isset($_SESSION['administrador'])) {
+    if(!isset($_SESSION['administrador'])){
     /* nos envía a la siguiente dirección en el caso de no poseer autorización */
     ?>
     <html>
@@ -225,18 +225,20 @@
 
             <ul class="list-unstyled components">
                 <li style="color: white;">
-                    <a href="https://proyectoclinica2021.000webhostapp.com/views/inicio.php">Inicio</a>
+                    <a href="./inicio.php">Inicio</a>
                 </li>
                 <li class="active">
                     <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Citas</a>
                     <ul class="collapse list-unstyled" id="homeSubmenu">
-                        <li> <a href="https://proyectoclinica2021.000webhostapp.com/views/citas/citas.php">Solicitar Cita</a> </li>
+                                    <!-- https://proyectoclinica2021.000webhostapp.com/views/citas/citas.php --> 
+                        <li> <a href="#">Solicitar Cita</a> </li>
                     </ul>
                 </li>
                 <li class="active">
                     <a href="#homeSubmenu2" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Tienda</a>
                     <ul class="collapse list-unstyled" id="homeSubmenu2">
-                        <li> <a href="https://proyectoclinica2021.000webhostapp.com/tienda/index.php">Comprar Productos</a> </li>
+                                    <!-- https://proyectoclinica2021.000webhostapp.com/tienda/index.php -->
+                        <li> <a href="#">Comprar Productos</a> </li>
                     </ul>
                 </li>
                
@@ -300,55 +302,67 @@
 
             <ul class="list-unstyled components">
                 <li style="color: white;">
-                    <a href="https://proyectoclinica2021.000webhostapp.com/views/inicio.php">Inicio</a>
+                    <a href="./inicio.php">Inicio</a>
                 </li>
                 <li class="active">
                     <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Usuarios</a>
                     <ul class="collapse list-unstyled" id="homeSubmenu">
-                        <li> <a href="https://proyectoclinica2021.000webhostapp.com/views/usuario/usuarios.php">Lista de Usuarios</a> </li>
-                        <li> <a href="https://proyectoclinica2021.000webhostapp.com/views/roles/roles.php">Roles de Usuario</a> </li>
+                                    <!-- https://proyectoclinica2021.000webhostapp.com/views/usuario/usuarios.php -->
+                        <li> <a href="#">Lista de Usuarios</a> </li>
+                                    <!-- https://proyectoclinica2021.000webhostapp.com/views/roles/roles.php -->
+                        <li> <a href="#">Roles de Usuario</a> </li>
                     </ul>
                 </li>
                 <li>
                     <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Citas</a>
                     <ul class="collapse list-unstyled" id="pageSubmenu">
-                        <li> <a href="https://proyectoclinica2021.000webhostapp.com/views/citas/citas.php">Lista de Citas</a> </li>
-                        <li> <a href="https://proyectoclinica2021.000webhostapp.com/views/ramaMedica/ramaMedica.php">Ramas Medicas</a> </li>
+                                    <!-- https://proyectoclinica2021.000webhostapp.com/views/citas/citas.php -->
+                        <li> <a href="#">Lista de Citas</a> </li>
+                                    <!-- https://proyectoclinica2021.000webhostapp.com/views/ramaMedica/ramaMedica.php -->
+                        <li> <a href="#">Ramas Medicas</a> </li>
                     </ul>
                 </li>
                 <li>
                     <a href="#pageSubmenu2" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Empleados</a>
                     <ul class="collapse list-unstyled" id="pageSubmenu2">
-                        <li> <a href="https://proyectoclinica2021.000webhostapp.com/views/empleados/personas.php">Lista de Empleados</a> </li>
-                        <li> <a href="https://proyectoclinica2021.000webhostapp.com/views/empleados/puestos.php">Puestos de Empleados</a>
+                                    <!-- https://proyectoclinica2021.000webhostapp.com/views/empleados/personas.php -->
+                        <li> <a href="#">Lista de Empleados</a> </li>
+                                    <!-- https://proyectoclinica2021.000webhostapp.com/views/empleados/puestos.php -->
+                        <li> <a href="#">Puestos de Empleados</a>
                         </li>
                     </ul>
                 </li>
                 <li>
                     <a href="#pageSubmenu3" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pacientes</a>
                     <ul class="collapse list-unstyled" id="pageSubmenu3">
-                        <li> <a href="https://proyectoclinica2021.000webhostapp.com/views/paciente/paciente.php">Listado de Pacientes</a> </li>
+                                    <!-- https://proyectoclinica2021.000webhostapp.com/views/paciente/paciente.php -->
+                        <li> <a href="#">Listado de Pacientes</a> </li>
                     </ul>
                 </li>
                 <li>
                     <a href="#pageSubmenu4" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Sucursales</a>
                     <ul class="collapse list-unstyled" id="pageSubmenu4">
-                        <li> <a href="https://proyectoclinica2021.000webhostapp.com/views/sucursales/sucursales.php">Lista de Sucursales</a> </li>
-                        <li> <a href="https://proyectoclinica2021.000webhostapp.com/views/habitaciones/habitaciones.php">Habitaciones de Sucursales</a> </li>
+                                    <!-- https://proyectoclinica2021.000webhostapp.com/views/sucursales/sucursales.php -->
+                        <li> <a href="#">Lista de Sucursales</a> </li>
+                                    <!-- https://proyectoclinica2021.000webhostapp.com/views/habitaciones/habitaciones.php -->
+                        <li> <a href="#">Habitaciones de Sucursales</a> </li>
                     </ul>
                 </li>
                 <li>
                     <a href="#pageSubmenu5" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Medicamento</a>
                     <ul class="collapse list-unstyled" id="pageSubmenu5">
-                        <li> <a href="https://proyectoclinica2021.000webhostapp.com/views/medicamento/medicamento.php">Lista de Medicamentos</a> </li>
-                        <li> <a href="https://proyectoclinica2021.000webhostapp.com/views/lotesMedicina/lotesMedicina.php">Lotes de Medicamentos</a> </li>
+                                    <!-- https://proyectoclinica2021.000webhostapp.com/views/medicamento/medicamento.php -->
+                        <li> <a href="#">Lista de Medicamentos</a> </li>
+                                    <!-- https://proyectoclinica2021.000webhostapp.com/views/lotesMedicina/lotesMedicina.php -->
+                        <li> <a href="#">Lotes de Medicamentos</a> </li>
                     </ul>
                 </li>
                 <li>
                     <a href="#pageSubmenu6" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Ventas</a>
                     <ul class="collapse list-unstyled" id="pageSubmenu6">
                         <li>
-                            <a href="https://proyectoclinica2021.000webhostapp.com/tienda/index.php">Tienda</a>
+                                    <!-- https://proyectoclinica2021.000webhostapp.com/tienda/index.php -->
+                            <a href="#">Tienda</a>
                         </li>
                     </ul>
                 </li>
@@ -363,7 +377,6 @@
         <div id="contvar">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
-
                     <button type="button" id="sidebarCollapse" class="navbar-btn">
                         <span></span>
                         <span></span>
