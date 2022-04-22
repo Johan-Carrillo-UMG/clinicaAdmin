@@ -317,18 +317,18 @@
                     <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Citas</a>
                     <ul class="collapse list-unstyled" id="pageSubmenu">
                                     <!-- https://proyectoclinica2021.000webhostapp.com/views/citas/citas.php -->
-                        <li> <a href="#">Lista de Citas</a> </li>
+                        <li> <a href="/proyectos/clinicaAdminTec/views/citas/citas.php">Lista de Citas</a> </li>
                                     <!-- https://proyectoclinica2021.000webhostapp.com/views/ramaMedica/ramaMedica.php -->
-                        <li> <a href="#">Ramas Medicas</a> </li>
+                        <li> <a href="/proyectos/clinicaAdminTec/views/ramaMedica/ramaMedica.php">Ramas Medicas</a> </li>
                     </ul>
                 </li>
                 <li>
                     <a href="#pageSubmenu2" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Empleados</a>
                     <ul class="collapse list-unstyled" id="pageSubmenu2">
                                     <!-- https://proyectoclinica2021.000webhostapp.com/views/empleados/personas.php -->
-                        <li> <a href="#">Lista de Empleados</a> </li>
+                        <li> <a href="/proyectos/clinicaAdminTec/views/empleados/personas.php">Lista de Empleados</a> </li>
                                     <!-- https://proyectoclinica2021.000webhostapp.com/views/empleados/puestos.php -->
-                        <li> <a href="#">Puestos de Empleados</a>
+                        <li> <a href="/proyectos/clinicaAdminTec/views/empleados/puestos.php">Puestos de Empleados</a>
                         </li>
                     </ul>
                 </li>
@@ -336,14 +336,16 @@
                     <a href="#pageSubmenu3" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pacientes</a>
                     <ul class="collapse list-unstyled" id="pageSubmenu3">
                                     <!-- https://proyectoclinica2021.000webhostapp.com/views/paciente/paciente.php -->
-                        <li> <a href="#">Listado de Pacientes</a> </li>
+                        <li> <a href="/proyectos/clinicaAdminTec/views/paciente/paciente.php">Listado de Pacientes</a> </li>
+                        <li> <a href="#">Historial médico</a>
+                        </li>
                     </ul>
                 </li>
                 <li>
                     <a href="#pageSubmenu4" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Sucursales</a>
                     <ul class="collapse list-unstyled" id="pageSubmenu4">
                                     <!-- https://proyectoclinica2021.000webhostapp.com/views/sucursales/sucursales.php -->
-                        <li> <a href="#">Lista de Sucursales</a> </li>
+                        <li> <a href="/proyectos/clinicaAdminTec/views/sucursales/sucursales.php">Lista de Sucursales</a> </li>
                                     <!-- https://proyectoclinica2021.000webhostapp.com/views/habitaciones/habitaciones.php -->
                         <li> <a href="#">Habitaciones de Sucursales</a> </li>
                     </ul>

@@ -8,7 +8,7 @@
 	$txt_apellidos = utf8_decode($_POST["txt_apellidos"]);
 	$txt_password = utf8_decode($_POST["txt_password"]);
 
-	$sqlInsertUser =  "INSERT INTO dbclinicaadmin.usuarios(email, nombres, apellidos, password, id_rol) 
+	$sqlInsertUser =  "INSERT INTO usuarios(email, nombres, apellidos, password, id_rol) 
 						VALUES ('".$txt_email."', '".$txt_nombres."', '".$txt_apellidos."', '".$txt_password."', 3)";
 	
 	if($db_conexionUInsert->query($sqlInsertUser)==true){

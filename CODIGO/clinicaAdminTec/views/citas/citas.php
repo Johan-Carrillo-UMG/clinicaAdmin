@@ -19,7 +19,7 @@ if (!isset($_SESSION['administrador']))
 
 	//Citas
 	$db_conexionCitas = mysqli_connect($db_host, $db_user, $db_pass, $db_nombre,$port);
-	$db_conexionCitas->real_query("SELECT c.id_cita as id, rm.rama, e.nombres, c.sintomas, c.fecha_hora FROM citas as c INNER JOIN id17547686_db_clinicaproyecto_2021.rama_medica AS rm ON c.id_rama_medica = rm.id_rama_medica INNER JOIN id17547686_db_clinicaproyecto_2021.empleados as e oN c.id_empleado = e.id_empleado;");
+	$db_conexionCitas->real_query("SELECT c.id_cita as id, rm.rama, e.nombres, c.sintomas, c.fecha_hora FROM citas as c INNER JOIN dbclinicaadmin.rama_medica AS rm ON c.id_rama_medica = rm.id_rama_medica INNER JOIN dbclinicaadmin.empleados as e oN c.id_empleado = e.id_empleado;");
 	$resultadoC = $db_conexionCitas->use_result();
 
 	//RamasMedicas
@@ -29,13 +29,13 @@ if (!isset($_SESSION['administrador']))
 
 	//Empleados --> Medicos
 	$db_conexionEmpleados = mysqli_connect($db_host, $db_user, $db_pass, $db_nombre,$port);
-	$db_conexionEmpleados->real_query("SELECT id_empleado, nombres, apellidos FROM id17547686_db_clinicaproyecto_2021.empleados WHERE id_puesto=1 ORDER BY rand() LIMIT 1;");
+	$db_conexionEmpleados->real_query("SELECT id_empleado, nombres, apellidos FROM dbclinicaadmin.empleados WHERE id_puesto=1 ORDER BY rand() LIMIT 1;");
 	$resultadoM = $db_conexionEmpleados->use_result();
 	$filaMedico = $resultadoM->fetch_assoc();
 
     //Sucursales
     $db_conexionSucursales = mysqli_connect($db_host, $db_user, $db_pass, $db_nombre,$port);
-    $db_conexionSucursales -> real_query("SELECT id_sucursal AS id, nombre FROM id17547686_db_clinicaproyecto_2021.sucursales;");
+    $db_conexionSucursales -> real_query("SELECT id_sucursal AS id, nombre FROM dbclinicaadmin.sucursales;");
     $resultadoSucursales = $db_conexionSucursales -> use_result();
     
 ?>
