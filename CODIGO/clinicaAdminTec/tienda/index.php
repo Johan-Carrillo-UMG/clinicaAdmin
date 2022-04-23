@@ -4,12 +4,8 @@ require_once 'conexion.php';
 
 //MEDICAMENTO
 $db_conexionMedicamento = mysqli_connect($db_host, $db_user, $db_pass, $db_nombre, $port);
-$db_conexionMedicamento->real_query("SELECT m.id_medicamento AS id,m.nombre,m.marca,m.descripcion,lm.nombre as NombreLote,m.precio_costo,m.precio_venta,m.cantidad FROM id17547686_db_clinicaproyecto_2021.medicamento AS m INNER JOIN id17547686_db_clinicaproyecto_2021.lotes_medicina AS lm ON m.id_lote_medicina = lm.id_lote_medicina ORDER BY m.nombre;");
+$db_conexionMedicamento->real_query("SELECT m.id_medicamento AS id, m.nombre, m.marca, m.descripcion, m.precio_costo, m.precio_venta, m.cantidad FROM dbclinicaadmin.medicamento AS m ORDER BY m.nombre;");
 $resultadoM = $db_conexionMedicamento->use_result();
-
-$db_conexionMedicamentoDos = mysqli_connect($db_host, $db_user, $db_pass, $db_nombre, $port);
-$db_conexionMedicamentoDos->real_query("SELECT m.id_medicamento AS id,m.nombre,m.marca,m.descripcion,lm.nombre as NombreLote,m.precio_costo,m.precio_venta,m.cantidad FROM id17547686_db_clinicaproyecto_2021.medicamento AS m INNER JOIN id17547686_db_clinicaproyecto_2021.lotes_medicina AS lm ON m.id_lote_medicina = lm.id_lote_medicina ORDER BY m.nombre;");
-$resultadoMDos = $db_conexionMedicamentoDos->use_result();
 
 ?>
 
@@ -78,7 +74,7 @@ $resultadoMDos = $db_conexionMedicamentoDos->use_result();
     <main style="margin-bottom: 2em;">
         <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 my-4 mx-auto text-center">
             <br>
-            <h1 class="display-4 mt-4">CLINICA PRIVADA - DESARROLLO WEB</h1>
+            <h1 class="display-4 mt-4" style="font-weight: bold">Clínica Privada - Administración de Tecnologías</h1>
             <p class="lead">¡Selecciona nuestros medicamentos!</p>
             <p class="lead">¡Elije tu medicina y al procesar la compra decides la cantidad de unidades!</p>
         </div>

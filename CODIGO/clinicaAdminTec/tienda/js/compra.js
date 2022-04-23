@@ -50,17 +50,19 @@ function procesarCompra() {
 
         //aqui se coloca el user id generado en el emailJS --> Email Templates --> Settings --> Playground --> ABAJO:  emailjs.init('XXXXXXXXXXX')
         (function () {
-            emailjs.init('user_GqwFWw2m0yY4yyUwhnjo4')
+            emailjs.init('user_6EvaRKr1JFmmeq8MIsrF3')
         })();
 
         //El campo {{detalleCompra}} es el que se añadió en la plantilla de emailjs 
         /* 
         Hola {{destinatario}},
         Hemos recibido tu pedido, se está preparando...
-        El monto total es de {{monto}}.
+        El monto total es de: {{monto}}.
+        
+        DETALLE:
         {{detalleCompra}}
-
-        --Desarrollo web - Proyecto Clinica--
+        
+        Administración de Tecnologías - Proyecto Clinica
         */
 
         /* AGREGAR DATOS DE FORMA RAPIDA A UN TEXT AREA */
@@ -83,8 +85,8 @@ function procesarCompra() {
             event.preventDefault();
 
             // Cambiar el Service_ID o bien dejar el default_service
-            var service_id = "default_service"; //service_gwji72b --> Se consigue en: Email Services --> Click en un servicio de Gmail
-            var template_id = "template_9sefdsn"; //Se consigue en: --> Email Templates --> Settings --> Templeta ID
+            var service_id = "service_blfvj7o"; //service_gwji72b --> Se consigue en: Email Services --> Click en un servicio de Gmail
+            var template_id = "template_dl92zqs"; //Se consigue en: --> Email Templates --> Settings --> Templete ID
 
             const cargandoGif = document.querySelector('#cargando');
             cargandoGif.style.display = 'block';

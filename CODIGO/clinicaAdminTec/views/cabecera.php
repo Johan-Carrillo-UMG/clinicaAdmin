@@ -238,7 +238,7 @@
                     <a href="#homeSubmenu2" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Tienda</a>
                     <ul class="collapse list-unstyled" id="homeSubmenu2">
                                     <!-- https://proyectoclinica2021.000webhostapp.com/tienda/index.php -->
-                        <li> <a href="#">Comprar Productos</a> </li>
+                        <li> <a href="/proyectos/clinicaAdminTec/tienda">Comprar Productos</a> </li>
                     </ul>
                 </li>
                
@@ -364,7 +364,7 @@
                     <ul class="collapse list-unstyled" id="pageSubmenu6">
                         <li>
                                     <!-- https://proyectoclinica2021.000webhostapp.com/tienda/index.php -->
-                            <a href="#">Tienda</a>
+                            <a href="/proyectos/clinicaAdminTec/tienda">Tienda</a>
                         </li>
                     </ul>
                 </li>
