@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 23, 2022 at 02:39 AM
+-- Generation Time: Apr 23, 2022 at 07:22 AM
 -- Server version: 10.4.6-MariaDB
 -- PHP Version: 7.1.31
 
@@ -122,13 +122,13 @@ CREATE TABLE `medicamento` (
 
 INSERT INTO `medicamento` (`id_medicamento`, `nombre`, `marca`, `descripcion`, `precio_costo`, `precio_venta`, `cantidad`) VALUES
 (1, 'Paracetamol', 'FaverAll', 'Alivio de fiebre y dolores asociados', 52.00, 65.00, 10),
-(2, 'Panadol antigripal', 'GLAXOS', 'Panadol antigripal - 12 tabletas', 12.50, 20.00, 50),
+(2, 'Panadol_antigripal', 'GLAXOS', 'Panadol antigripal - 12 tabletas', 12.50, 20.00, 50),
 (3, 'Eucerin', 'B.D.F Dermatologia', 'Crema hidratante para piel seca o extraseca', 140.00, 180.00, 100),
-(4, 'Marcarillas KN95', 'GENERAL', 'Mascarillas KN-95 - 20 U', 80.00, 100.00, 50),
-(5, 'Mascarilla simple', 'VIAMED', 'Mascarilla simple de 4 pitas', 1.50, 3.00, 500),
-(6, 'Crema Lubriderm', 'JOHNSON & JOHNSON', 'Crema humectante 200 ml', 40.00, 62.50, 20),
-(7, 'Lubrederm UV', 'JOHNSON & JOHNSON', 'Crema humectante con proteccion UV 200 ml', 55.00, 95.00, 20),
-(8, 'Lubrederm UV 120 ml', 'JOHNSON & JOHNSON', 'Crema humectante con proteccion UV 120 ml', 30.00, 55.00, 30);
+(4, 'Marcarillas_KN95', 'GENERAL', 'Mascarillas KN-95 - 20 U', 80.00, 100.00, 50),
+(5, 'Mascarilla_simple', 'VIAMED', 'Mascarilla simple de 4 pitas', 1.50, 3.00, 500),
+(6, 'Crema_Lubriderm', 'JOHNSON & JOHNSON', 'Crema humectante 200 ml', 40.00, 62.50, 20),
+(7, 'Lubrederm_UV', 'JOHNSON & JOHNSON', 'Crema humectante con proteccion UV 200 ml', 55.00, 95.00, 20),
+(8, 'Lubrederm_UV_120_ml', 'JOHNSON & JOHNSON', 'Crema humectante con proteccion UV 120 ml', 30.00, 55.00, 30);
 
 -- --------------------------------------------------------
 

@@ -5,7 +5,7 @@ require_once 'conexion.php';
 //MEDICAMENTO
 $db_conexionMedicamento = mysqli_connect($db_host, $db_user, $db_pass, $db_nombre, $port);
 $idEdit = utf8_decode($_GET["id"]);
-$db_conexionMedicamento->real_query("SELECT m.id_medicamento AS id,m.nombre,m.marca,m.descripcion,lm.nombre as NombreLote,m.precio_costo,m.precio_venta,m.cantidad FROM clinicaproyecto_2021.medicamento AS m INNER JOIN clinicaproyecto_2021.lotes_medicina AS lm ON m.id_lote_medicina = lm.id_lote_medicina WHERE m.id_medicamento = $idEdit;");
+$db_conexionMedicamento->real_query("SELECT m.id_medicamento AS id, m.nombre, m.marca, m.descripcion, m.precio_costo, m.precio_venta, m.cantidad FROM dbclinicaadmin.medicamento AS m WHERE m.id_medicamento = $idEdit;");
 $resultadoM = $db_conexionMedicamento->use_result();
 $filaMedicina = $resultadoM->fetch_assoc()
 
