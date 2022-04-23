@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 30, 2022 at 03:59 AM
+-- Generation Time: Apr 23, 2022 at 02:27 AM
 -- Server version: 10.4.6-MariaDB
 -- PHP Version: 7.1.31
 
@@ -35,6 +35,25 @@ CREATE TABLE `citas` (
   `sintomas` varchar(255) NOT NULL,
   `fecha_hora` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `compras`
+--
+
+CREATE TABLE `compras` (
+  `id_compra` int(11) NOT NULL,
+  `id_medicamento` int(11) NOT NULL,
+  `id_compra_realizada` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `compras`
+--
+
+INSERT INTO `compras` (`id_compra`, `id_medicamento`, `id_compra_realizada`) VALUES
+(1, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -84,6 +103,36 @@ CREATE TABLE `historial_medico` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `medicamento`
+--
+
+CREATE TABLE `medicamento` (
+  `id_medicamento` int(11) NOT NULL,
+  `nombre` varchar(255) NOT NULL,
+  `marca` varchar(255) NOT NULL,
+  `descripcion` varchar(255) NOT NULL,
+  `precio_costo` double(8,2) NOT NULL,
+  `precio_venta` double(8,2) NOT NULL,
+  `cantidad` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `medicamento`
+--
+
+INSERT INTO `medicamento` (`id_medicamento`, `nombre`, `marca`, `descripcion`, `precio_costo`, `precio_venta`, `cantidad`) VALUES
+(1, 'Paracetamol', 'FaverAll', 'Alivio de fiebre y dolores asociados', 52.00, 65.00, 10),
+(2, 'Panadol antigripal', 'GLAXOS', 'Panadol antigripal - 12 tabletas', 12.50, 20.00, 50),
+(3, 'Eucerin', 'B.D.F Dermatologia', 'Crema hidratante para piel seca o extraseca', 140.00, 180.00, 100),
+(4, 'Marcarillas KN95', 'GENERAL', 'Mascarillas KN-95 - 20 U', 80.00, 100.00, 50),
+(5, 'Mascarilla simple', 'VIAMED', 'Mascarilla simple de 4 pitas', 1.50, 3.00, 500),
+(6, 'Crema Lubriderm', 'JOHNSON & JOHNSON', 'Crema humectante 200 ml', 40.00, 62.50, 20),
+(7, 'Lubrederm UV', 'JOHNSON & JOHNSON', 'Crema humectante con protección UV 200 ml', 55.00, 95.00, 20),
+(8, 'Lubrederm UV 120 ml', 'JOHNSON & JOHNSON', 'Crema humectante con protección UV 120 ml', 30.00, 55.00, 30);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `pacientes`
 --
 
@@ -128,8 +177,16 @@ CREATE TABLE `rama_medica` (
 CREATE TABLE `receta_medica` (
   `id_receta_medica` int(11) NOT NULL,
   `fecha` date NOT NULL,
-  `descripcion` varchar(255) NOT NULL
+  `descripcion` varchar(255) NOT NULL,
+  `id_compra_realizada` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `receta_medica`
+--
+
+INSERT INTO `receta_medica` (`id_receta_medica`, `fecha`, `descripcion`, `id_compra_realizada`) VALUES
+(1, '2022-04-21', 'Compra de medicamento', 1);
 
 -- --------------------------------------------------------
 
@@ -141,6 +198,15 @@ CREATE TABLE `roles` (
   `id_rol` int(11) NOT NULL,
   `rol` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `roles`
+--
+
+INSERT INTO `roles` (`id_rol`, `rol`) VALUES
+(1, 'admin'),
+(2, 'empleado'),
+(3, 'cliente');
 
 -- --------------------------------------------------------
 
@@ -170,6 +236,14 @@ CREATE TABLE `usuarios` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
+-- Dumping data for table `usuarios`
+--
+
+INSERT INTO `usuarios` (`id_usuario`, `email`, `nombres`, `apellidos`, `password`, `id_rol`) VALUES
+(1, 'admin@gmail.com', 'admin', 'admin', 'admin123', 1),
+(2, 'cliente@gmail.com', 'Cliente', 'Test', 'test123', 3);
+
+--
 -- Indexes for dumped tables
 --
 
@@ -180,6 +254,14 @@ ALTER TABLE `citas`
   ADD PRIMARY KEY (`id_cita`),
   ADD KEY `id_rama_medica` (`id_rama_medica`),
   ADD KEY `id_empleado` (`id_empleado`);
+
+--
+-- Indexes for table `compras`
+--
+ALTER TABLE `compras`
+  ADD PRIMARY KEY (`id_compra`),
+  ADD KEY `id_compra_realizada` (`id_compra_realizada`),
+  ADD KEY `id_medicamento` (`id_medicamento`);
 
 --
 -- Indexes for table `detalle_citas`
@@ -208,6 +290,12 @@ ALTER TABLE `historial_medico`
   ADD KEY `id_receta_medica` (`id_receta_medica`);
 
 --
+-- Indexes for table `medicamento`
+--
+ALTER TABLE `medicamento`
+  ADD PRIMARY KEY (`id_medicamento`);
+
+--
 -- Indexes for table `pacientes`
 --
 ALTER TABLE `pacientes`
@@ -229,7 +317,8 @@ ALTER TABLE `rama_medica`
 -- Indexes for table `receta_medica`
 --
 ALTER TABLE `receta_medica`
-  ADD PRIMARY KEY (`id_receta_medica`);
+  ADD PRIMARY KEY (`id_receta_medica`),
+  ADD KEY `id_compra_realizada` (`id_compra_realizada`);
 
 --
 -- Indexes for table `roles`
@@ -262,6 +351,12 @@ ALTER TABLE `citas`
   MODIFY `id_cita` int(11) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT for table `compras`
+--
+ALTER TABLE `compras`
+  MODIFY `id_compra` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT for table `detalle_citas`
 --
 ALTER TABLE `detalle_citas`
@@ -278,6 +373,12 @@ ALTER TABLE `empleados`
 --
 ALTER TABLE `historial_medico`
   MODIFY `id_historial_medico` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `medicamento`
+--
+ALTER TABLE `medicamento`
+  MODIFY `id_medicamento` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `pacientes`
@@ -301,13 +402,13 @@ ALTER TABLE `rama_medica`
 -- AUTO_INCREMENT for table `receta_medica`
 --
 ALTER TABLE `receta_medica`
-  MODIFY `id_receta_medica` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_receta_medica` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `roles`
 --
 ALTER TABLE `roles`
-  MODIFY `id_rol` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_rol` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `sucursales`
@@ -319,7 +420,7 @@ ALTER TABLE `sucursales`
 -- AUTO_INCREMENT for table `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Constraints for dumped tables
@@ -331,6 +432,13 @@ ALTER TABLE `usuarios`
 ALTER TABLE `citas`
   ADD CONSTRAINT `citas_ibfk_1` FOREIGN KEY (`id_rama_medica`) REFERENCES `rama_medica` (`id_rama_medica`) ON UPDATE CASCADE,
   ADD CONSTRAINT `citas_ibfk_2` FOREIGN KEY (`id_empleado`) REFERENCES `empleados` (`id_empleado`) ON UPDATE CASCADE;
+
+--
+-- Constraints for table `compras`
+--
+ALTER TABLE `compras`
+  ADD CONSTRAINT `compras_ibfk_1` FOREIGN KEY (`id_medicamento`) REFERENCES `medicamento` (`id_medicamento`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `compras_ibfk_2` FOREIGN KEY (`id_compra_realizada`) REFERENCES `receta_medica` (`id_compra_realizada`) ON UPDATE CASCADE;
 
 --
 -- Constraints for table `detalle_citas`
