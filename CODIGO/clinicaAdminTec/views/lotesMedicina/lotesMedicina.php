@@ -16,7 +16,7 @@ if (!isset($_SESSION['administrador']))
 
 	//USUARIOS
 	$db_conexionUsuarios = mysqli_connect($db_host, $db_user, $db_pass, $db_nombre,$port);
-	$db_conexionUsuarios->real_query("SELECT * FROM id17547686_db_clinicaproyecto_2021.lotes_medicina;");
+	$db_conexionUsuarios->real_query("SELECT * FROM webapsgt_dbclinicaadmin.lotes_medicina;");
 	$resultadoU = $db_conexionUsuarios->use_result();
 
 

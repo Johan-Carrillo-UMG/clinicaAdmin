@@ -11,10 +11,10 @@ if(!$db_conexionLogin){
 $email = utf8_decode($_POST["email"]);
 $password = utf8_decode($_POST["password"]);
 
-$query = mysqli_query($db_conexionLogin, "SELECT email, password FROM dbclinicaadmin.usuarios WHERE email = '".$email."' AND password = '".$password."' AND id_rol ='1';");
+$query = mysqli_query($db_conexionLogin, "SELECT email, password FROM webapsgt_dbclinicaadmin.usuarios WHERE email = '".$email."' AND password = '".$password."' AND id_rol ='1';");
 $resultadoL = mysqli_num_rows($query);
 
-$query2 = mysqli_query($db_conexionLogin, "SELECT email, password FROM dbclinicaadmin.usuarios WHERE email = '".$email."' AND password = '".$password."';");
+$query2 = mysqli_query($db_conexionLogin, "SELECT email, password FROM webapsgt_dbclinicaadmin.usuarios WHERE email = '".$email."' AND password = '".$password."';");
 $resultadoLL = mysqli_num_rows($query2);
 
 if($resultadoL > 0){

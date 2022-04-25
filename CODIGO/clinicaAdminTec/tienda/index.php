@@ -4,7 +4,7 @@ require_once 'conexion.php';
 
 //MEDICAMENTO
 $db_conexionMedicamento = mysqli_connect($db_host, $db_user, $db_pass, $db_nombre, $port);
-$db_conexionMedicamento->real_query("SELECT m.id_medicamento AS id, m.nombre, m.marca, m.descripcion, m.precio_costo, m.precio_venta, m.cantidad FROM dbclinicaadmin.medicamento AS m ORDER BY m.nombre;");
+$db_conexionMedicamento->real_query("SELECT m.id_medicamento AS id, m.nombre, m.marca, m.descripcion, m.precio_costo, m.precio_venta, m.cantidad FROM webapsgt_dbclinicaadmin.medicamento AS m ORDER BY m.nombre;");
 $resultadoM = $db_conexionMedicamento->use_result();
 
 ?>

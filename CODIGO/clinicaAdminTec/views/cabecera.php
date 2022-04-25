@@ -302,15 +302,16 @@
 
             <ul class="list-unstyled components">
                 <li style="color: white;">
-                    <a href="./inicio.php">Inicio</a>
+                    <!-- <a href="./inicio.php">Inicio</a> -->
+                    <a href="/proyectos/clinicaAdminTec/views/inicio.php">Inicio</a>
                 </li>
                 <li class="active">
                     <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Usuarios</a>
                     <ul class="collapse list-unstyled" id="homeSubmenu">
                                     <!-- https://proyectoclinica2021.000webhostapp.com/views/usuario/usuarios.php -->
-                        <li> <a href="#">Lista de Usuarios</a> </li>
+                        <li> <a href="/proyectos/clinicaAdminTec/views/usuario/usuarios.php">Lista de Usuarios</a> </li>
                                     <!-- https://proyectoclinica2021.000webhostapp.com/views/roles/roles.php -->
-                        <li> <a href="#">Roles de Usuario</a> </li>
+                        <li> <a href="/proyectos/clinicaAdminTec/views/roles/roles.php">Roles de Usuario</a> </li>
                     </ul>
                 </li>
                 <li>
@@ -347,16 +348,16 @@
                                     <!-- https://proyectoclinica2021.000webhostapp.com/views/sucursales/sucursales.php -->
                         <li> <a href="/proyectos/clinicaAdminTec/views/sucursales/sucursales.php">Lista de Sucursales</a> </li>
                                     <!-- https://proyectoclinica2021.000webhostapp.com/views/habitaciones/habitaciones.php -->
-                        <li> <a href="#">Habitaciones de Sucursales</a> </li>
+                        <li> <a href="/proyectos/clinicaAdminTec/views/habitaciones/habitaciones.php">Habitaciones de Sucursales</a> </li>
                     </ul>
                 </li>
                 <li>
                     <a href="#pageSubmenu5" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Medicamento</a>
                     <ul class="collapse list-unstyled" id="pageSubmenu5">
                                     <!-- https://proyectoclinica2021.000webhostapp.com/views/medicamento/medicamento.php -->
-                        <li> <a href="#">Lista de Medicamentos</a> </li>
+                        <li> <a href="/proyectos/clinicaAdminTec/views/medicamento/medicamento.php">Lista de Medicamentos</a> </li>
                                     <!-- https://proyectoclinica2021.000webhostapp.com/views/lotesMedicina/lotesMedicina.php -->
-                        <li> <a href="#">Lotes de Medicamentos</a> </li>
+                        <li> <a href="/proyectos/clinicaAdminTec/views/lotesMedicina/lotesMedicina.php">Lotes de Medicamentos</a> </li>
                     </ul>
                 </li>
                 <li>
