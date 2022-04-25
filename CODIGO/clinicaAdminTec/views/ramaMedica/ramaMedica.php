@@ -16,7 +16,7 @@ if (!isset($_SESSION['administrador']))
 
 	//RAMAS MEDICAS
 	$db_conexionRama = mysqli_connect($db_host, $db_user, $db_pass, $db_nombre,$port);
-	$db_conexionRama->real_query("SELECT id_rama_medica AS id, rama AS rama FROM dbclinicaadmin.rama_medica;");
+	$db_conexionRama->real_query("SELECT id_rama_medica AS id, rama AS rama FROM webapsgt_dbclinicaadmin.rama_medica;");
 	$resultadoRama = $db_conexionRama->use_result();
 
 ?>

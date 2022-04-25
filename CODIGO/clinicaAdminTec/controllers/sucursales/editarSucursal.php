@@ -5,7 +5,7 @@
     $txt_nombre = utf8_decode($_POST["txt_nombre"]);
 	$txt_direccion = utf8_decode($_POST['txt_direccion']);
 	
-	$sqlUpdate = "UPDATE sucursales SET nombre = '". $txt_nombre ."', direccion = '". $txt_direccion ."' WHERE id_sucursal = ". $idEdit .";";
+	$sqlUpdate = "UPDATE sucursales SET nombre = '". $txt_nombre ."', dirección = '". $txt_direccion ."' WHERE id_sucursal = ". $idEdit .";";
 
 	if($db_conexionREditar->query($sqlUpdate)==true){
 		echo 'REGISTRO MODIFICADO';

@@ -4,7 +4,7 @@
     
 	$txt_rama = utf8_decode($_POST["txt_rama"]);
 
-	$sqlInsertRama =  "INSERT INTO id17547686_db_clinicaproyecto_2021.rama_medica(rama) 
+	$sqlInsertRama =  "INSERT INTO webapsgt_dbclinicaadmin.rama_medica(rama) 
 						VALUES ('".$txt_rama."')";
 	
 	if($db_conexionRInsert->query($sqlInsertRama)==true){

@@ -6,7 +6,7 @@
 	$idEdit = utf8_decode($_POST["id"]);
 	$txt_rama = utf8_decode($_POST['txt_rama']);
 	
-	$sqlUpdate = "UPDATE id17547686_db_clinicaproyecto_2021.rama_medica SET rama ='".$txt_rama."' WHERE id_rama_medica = $idEdit;";
+	$sqlUpdate = "UPDATE webapsgt_dbclinicaadmin.rama_medica SET rama ='".$txt_rama."' WHERE id_rama_medica = $idEdit;";
 
 	if($db_conexionUEditar->query($sqlUpdate)==true){
 		echo 'REGISTRO MODIFICADO';

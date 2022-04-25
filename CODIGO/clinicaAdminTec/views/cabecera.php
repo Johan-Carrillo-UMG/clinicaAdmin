@@ -348,7 +348,7 @@
                                     <!-- https://proyectoclinica2021.000webhostapp.com/views/sucursales/sucursales.php -->
                         <li> <a href="/proyectos/clinicaAdminTec/views/sucursales/sucursales.php">Lista de Sucursales</a> </li>
                                     <!-- https://proyectoclinica2021.000webhostapp.com/views/habitaciones/habitaciones.php -->
-                        <li> <a href="/proyectos/clinicaAdminTec/views/habitaciones/habitaciones.php">Habitaciones de Sucursales</a> </li>
+                        <!-- <li> <a href="/proyectos/clinicaAdminTec/views/habitaciones/habitaciones.php">Habitaciones de Sucursales</a> </li> -->
                     </ul>
                 </li>
                 <li>

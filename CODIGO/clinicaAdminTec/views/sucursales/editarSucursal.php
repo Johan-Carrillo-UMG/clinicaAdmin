@@ -15,7 +15,7 @@ if (!isset($_SESSION['administrador']))
     require_once '../../controllers/conexion.php';
     $db_conexionREdit = mysqli_connect($db_host, $db_user, $db_pass, $db_nombre, $port);
     $idEdit = utf8_decode($_GET["id"]);
-    $db_conexionREdit->real_query("SELECT id_sucursal as id, nombre, direccion FROM sucursales WHERE id_sucursal  = $idEdit;");
+    $db_conexionREdit->real_query("SELECT id_sucursal as id, nombre, dirección FROM sucursales WHERE id_sucursal  = $idEdit;");
     $resultadoREdit = $db_conexionREdit->use_result();
     $fila = $resultadoREdit->fetch_assoc();
 ?>
@@ -51,7 +51,7 @@ if (!isset($_SESSION['administrador']))
                     </div>
                     <div class="col-md-12">
                         <label for="lbl_puesto" class="form-label"><b>Dirección</b></label>
-                        <input type="text" name="txt_direccion" id="txt_direccion" class="form-control" value="<?php echo $fila['direccion']; ?>">
+                        <input type="text" name="txt_direccion" id="txt_direccion" class="form-control" value="<?php echo $fila['dirección']; ?>">
                     </div>
                 </div>
                 <div style="margin-top: 1em;">

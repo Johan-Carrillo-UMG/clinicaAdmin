@@ -16,7 +16,7 @@ require_once '../../controllers/conexion.php';
 
 //SUCURSALES
 $db_conexionRoles = mysqli_connect($db_host, $db_user, $db_pass, $db_nombre, $port);
-$db_conexionRoles->real_query("SELECT id_sucursal as id, nombre, direccion FROM sucursales;");
+$db_conexionRoles->real_query("SELECT id_sucursal as id, nombre, dirección FROM sucursales;");
 $resultadoR = $db_conexionRoles->use_result();
 
 ?>
@@ -87,7 +87,7 @@ $resultadoR = $db_conexionRoles->use_result();
                             while ($fila = $resultadoR->fetch_assoc()) {
                                 echo "<tr data-id=" . $fila['id'] . ">";
                                 echo "<td>" . $fila['nombre'] . "</td>";
-                                echo "<td>" . $fila['direccion'] . "</td>";
+                                echo "<td>" . $fila['dirección'] . "</td>";
                                 echo "<td><a href='editarSucursal.php?id=" . $fila['id'] . "' class='btn btn-warning'>Editar</a>
 								        <a href='../../controllers/sucursales/eliminarSucursal.php?id=" . $fila['id'] . "' class='btn btn-danger'>Eliminar</a></td>";
                                 echo "</tr>";

@@ -1,9 +1,9 @@
 <?php
-	include '../conexion.php';
+	include '../../controllers/conexion.php';
 	$db_conexionRInsert = mysqli_connect($db_host,$db_user,$db_pass,$db_nombre,$port);
     $txt_nombre = utf8_decode($_POST["txt_nombre"]);
     $txt_direccion = utf8_decode($_POST["txt_direccion"]);
-	$sqlInsertPuesto =  "INSERT INTO id17547686_db_clinicaproyecto_2021.sucursales(nombre, direccion) VALUES ('".$txt_nombre."', '".$txt_direccion."');";
+	$sqlInsertPuesto =  "INSERT INTO webapsgt_dbclinicaadmin.sucursales(nombre, dirección) VALUES ('".$txt_nombre."', '".$txt_direccion."');";
 	
 	if($db_conexionRInsert->query($sqlInsertPuesto)==true){
 		$db_conexionRInsert -> close();

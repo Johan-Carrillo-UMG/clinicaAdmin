@@ -18,7 +18,7 @@ if (!isset($_SESSION['administrador']))
 
     $db_conexionRMEdit = mysqli_connect($db_host, $db_user, $db_pass, $db_nombre, $port);
     $idEdit = utf8_decode($_GET["id"]);
-    $db_conexionRMEdit -> real_query("SELECT id_rama_medica as id, rama FROM id17547686_db_clinicaproyecto_2021.rama_medica where id_rama_medica = $idEdit;");
+    $db_conexionRMEdit -> real_query("SELECT id_rama_medica as id, rama FROM webapsgt_dbclinicaadmin.rama_medica where id_rama_medica = $idEdit;");
     $resultadoRMEdit = $db_conexionRMEdit -> use_result();
     $filaRamaEdit = $resultadoRMEdit -> fetch_assoc();
 
