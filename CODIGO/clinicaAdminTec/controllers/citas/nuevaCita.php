@@ -1,7 +1,5 @@
 <?php 
-    include ("../conexion.php");
-    //$conexion = mysqli_connect($db_host, $db_user, $db_pass, $db_nombre, $port);
-
+    include '../../controllers/conexion.php';
 	$db_conexionPCInsert = mysqli_connect($db_host,$db_user,$db_pass,$db_nombre,$port);
 	date_default_timezone_set('Etc/GMT-6');
 
@@ -25,11 +23,11 @@
     
 
 	//INSERT PACIENTES
-	$sqlInsertPaciente =  "INSERT INTO id17547686_db_clinicaproyecto_2021.pacientes(nombres,apellidos,fecha_nacimiento,telefono,direccion,correo_electronico) 
+	$sqlInsertPaciente =  "INSERT INTO webapsgt_dbclinicaadmin.pacientes(nombres,apellidos,fecha_nacimiento,telefono,direccion,correo_electronico) 
                             VALUES ('".$txt_nombres."','".$txt_apellidos."','".$txt_fn."','".$txt_telefono."','".$txt_direccion."','".$txt_email."')";
 
     //INSERT CITAS
-    $sqlInsertCita =  "INSERT INTO id17547686_db_clinicaproyecto_2021.citas(id_rama_medica,id_empleado,sintomas,fecha_hora) 
+    $sqlInsertCita =  "INSERT INTO webapsgt_dbclinicaadmin.citas(id_rama_medica,id_empleado,sintomas,fecha_hora) 
                         VALUES (".$drop_rama.",".$txt_id_medico.",'".$txt_sintomas."','".$fecha_convertida."')";
   
     
@@ -38,8 +36,8 @@
         if($db_conexionPCInsert->query($sqlInsertCita)==true){
             
             //DETALLE CITAS
-            $consultaPacientes = "SELECT id_paciente AS id FROM id17547686_db_clinicaproyecto_2021.pacientes ORDER BY id_paciente DESC LIMIT 0, 1;";    
-            $consultaCitas = "SELECT id_cita AS id FROM id17547686_db_clinicaproyecto_2021.citas ORDER BY id_cita DESC LIMIT 0, 1;";
+            $consultaPacientes = "SELECT id_paciente AS id FROM webapsgt_dbclinicaadmin.pacientes ORDER BY id_paciente DESC LIMIT 0, 1;";    
+            $consultaCitas = "SELECT id_cita AS id FROM webapsgt_dbclinicaadmin.citas ORDER BY id_cita DESC LIMIT 0, 1;";
             $resultadoPacientes = mysqli_query($db_conexionPCInsert, $consultaPacientes);
             $resultadoCitas = mysqli_query($db_conexionPCInsert, $consultaCitas);
 

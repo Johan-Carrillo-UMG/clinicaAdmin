@@ -1,6 +1,6 @@
 <?php
-	include ("../conexion.php");
-	//include '../conexion.php';
+include '../../controllers/conexion.php';
+
 
 	$db_conexionCEditar = mysqli_connect($db_host,$db_user,$db_pass,$db_nombre,$port);
 	date_default_timezone_set('Etc/GMT-6');

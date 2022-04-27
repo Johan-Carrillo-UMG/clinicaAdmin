@@ -6,16 +6,16 @@
 	//PACIENTES
 	$db_conexionHPaciente = mysqli_connect($db_host, $db_user, $db_pass, $db_nombre,$port);
     $idEdit = utf8_decode($_GET["id"]);
-	$db_conexionHPaciente->real_query("SELECT hm.id_paciente as id, p.nombres AS nombrePaciente, e.nombres AS nombreMedico, hm.observaciones FROM id17547686_db_clinicaproyecto_2021.historial_medico 
-										AS hm INNER JOIN id17547686_db_clinicaproyecto_2021.pacientes AS p ON hm.id_paciente = p.id_paciente INNER JOIN id17547686_db_clinicaproyecto_2021.empleados AS 
+	$db_conexionHPaciente->real_query("SELECT hm.id_paciente as id, p.nombres AS nombrePaciente, e.nombres AS nombreMedico, hm.observaciones FROM webapsgt_dbclinicaadmin.historial_medico 
+										AS hm INNER JOIN webapsgt_dbclinicaadmin.pacientes AS p ON hm.id_paciente = p.id_paciente INNER JOIN webapsgt_dbclinicaadmin.empleados AS 
 										e ON hm.id_empleado = e.id_empleado WHERE hm.id_paciente = $idEdit;");
 	$resultadoP = $db_conexionHPaciente->use_result();
 
 	//NOMBRE
 	$db_conexionHN = mysqli_connect($db_host, $db_user, $db_pass, $db_nombre,$port);
     $idEditN = utf8_decode($_GET["id"]);
-	$db_conexionHN->real_query("SELECT hm.id_paciente as id, p.nombres AS nombrePaciente, e.nombres AS nombreMedico, hm.observaciones FROM id17547686_db_clinicaproyecto_2021.historial_medico 
-										AS hm INNER JOIN id17547686_db_clinicaproyecto_2021.pacientes AS p ON hm.id_paciente = p.id_paciente INNER JOIN id17547686_db_clinicaproyecto_2021.empleados AS 
+	$db_conexionHN->real_query("SELECT hm.id_paciente as id, p.nombres AS nombrePaciente, e.nombres AS nombreMedico, hm.observaciones FROM webapsgt_dbclinicaadmin.historial_medico 
+										AS hm INNER JOIN webapsgt_dbclinicaadmin.pacientes AS p ON hm.id_paciente = p.id_paciente INNER JOIN webapsgt_dbclinicaadmin.empleados AS 
 										e ON hm.id_empleado = e.id_empleado WHERE hm.id_paciente = $idEditN;");
 	$resultadoPN = $db_conexionHN->use_result();
 	$filaDCEditN = $resultadoPN->fetch_assoc();

@@ -15,13 +15,8 @@ ob_start();
 require_once '../../controllers/conexion.php';
 
 $db_conexionMedicamento = mysqli_connect($db_host, $db_user, $db_pass, $db_nombre, $port);
-//;
-$db_conexionMedicamento->real_query("SELECT m.id_medicamento AS id,m.nombre,m.marca,m.descripcion,lm.nombre as nombreLote,m.precio_costo,m.precio_venta,m.cantidad FROM id17547686_db_clinicaproyecto_2021.medicamento AS m INNER JOIN id17547686_db_clinicaproyecto_2021.lotes_medicina AS lm ON m.id_lote_medicina = lm.id_lote_medicina ORDER BY m.nombre;");
-$resultadoM = $db_conexionMedicamento->use_result();
-
-$db_conexionId = mysqli_connect($db_host, $db_user, $db_pass, $db_nombre, $port);
-$db_conexionId->real_query("SELECT id_lote_medicina AS id, nombre AS nombreLote FROM id17547686_db_clinicaproyecto_2021.lotes_medicina;");
-$resultadoR = $db_conexionId->use_result();
+$db_conexionMedicamento->real_query("SELECT id_medicamento AS id, nombre, marca, descripcion, precio_costo, precio_venta, cantidad FROM webapsgt_dbclinicaadmin.medicamento ORDER BY nombre;");
+$resultadoR = $db_conexionMedicamento->use_result();
 
 
 ?>
@@ -32,11 +27,9 @@ $resultadoR = $db_conexionId->use_result();
 <head>
 	<title>Medicamentos</title>
 	<link rel="shortcut icon" href="imgs/titleUsuarios.png" />
-
 	<!-- Required meta tags -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
 	<!-- Bootstrap CSS v5.0.2 -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 	<!--<link rel="stylesheet" type="text/css" href="../Estilo/fondo.css">-->
@@ -62,19 +55,7 @@ $resultadoR = $db_conexionId->use_result();
 					</div>
 				</div>
 				<div class="row" style="margin-top: 1em;">
-                    <div class="col-md-6">
-						<label for="lbl_lote" class="form-label"><b>Lote del Medicamento</b></label>
-						<select class="form-select" name="drop_lote" id="drop_lote" required>
-							<option value=0>--- lote medicamento ---</option>
-							<?php
-								while ($filaId = $resultadoR->fetch_assoc()) {
-									echo "<option value=" . $filaId['id'] . ">" . $filaId['nombreLote'] . "</option>";
-								}
-								$db_conexionId->close();
-							?>
-						</select>
-					</div>
-					<div class="col-md-6">
+                  	<div class="col-md-12">
 						<label for="lbl_cantidad" class="form-label"><b>Existencias</b></label>
 						<input type="number" name="txt_cantidad" id="txt_cantidad" class="form-control" placeholder="Unidades" required>
 					</div>
@@ -103,7 +84,6 @@ $resultadoR = $db_conexionId->use_result();
 							include '../../controllers/medicamento/nuevoMedicamento.php';
 						}
                     ?>
-                    <a href="../lotesMedicina/lotesMedicina.php"><input class="btn btn-success" value="Editar Lotes"></a>
                 </div>
 			</form>
         </div>
@@ -120,7 +100,6 @@ $resultadoR = $db_conexionId->use_result();
 							<th>Nombre</th>
 							<th>Marca</th>
 							<th>Descripcion</th>
-							<th>Lote de Medicina</th>
 							<th>Precio Costo</th>
 							<th>Precio Venta</th>
 							<th>Existencias</th>
@@ -129,12 +108,11 @@ $resultadoR = $db_conexionId->use_result();
 						</thead>
 						<tbody>
 							<?php
-							while ($filaMedicamento = $resultadoM->fetch_assoc()) {
+							while ($filaMedicamento = $resultadoR->fetch_assoc()) {
 								echo "<tr data-id=" . $filaMedicamento['id'] . ">";
 								echo "<td>" . $filaMedicamento['nombre'] . "</td>";
 								echo "<td>" . $filaMedicamento['marca'] . "</td>";
 								echo "<td>" . $filaMedicamento['descripcion'] . "</td>";
-								echo "<td>" . $filaMedicamento['nombreLote'] . "</td>";
 								echo "<td>Q" . $filaMedicamento['precio_costo'] . "</td>";
 								echo "<td>Q" . $filaMedicamento['precio_venta'] . "</td>";
 								echo "<td>" . $filaMedicamento['cantidad'] . "</td>";

@@ -1,11 +1,11 @@
 <?php
-	include 'conexion.php';
+	include '../../controllers/conexion.php';
+
 
 	$db_conexionRInsert = mysqli_connect($db_host,$db_user,$db_pass,$db_nombre,$port);
-	
     $txt_rol = utf8_decode($_POST["txt_rol"]);
 
-	$sqlInsertRol =  "INSERT INTO id17547686_db_clinicaproyecto_2021.roles(rol) VALUES ('".$txt_rol."');";
+	$sqlInsertRol =  "INSERT INTO webapsgt_dbclinicaadmin.roles(rol) VALUES ('".$txt_rol."');";
 	
 	if($db_conexionRInsert->query($sqlInsertRol)==true){
 		$db_conexionRInsert -> close();

@@ -1,5 +1,5 @@
 <?php
-    include '../conexion.php';
+    include '../../controllers/conexion.php';
 	$db_conexionREditar = mysqli_connect($db_host,$db_user,$db_pass,$db_nombre,$port);
 	$idEdit = utf8_decode($_POST["id"]);
     $txt_nombre = utf8_decode($_POST["txt_nombre"]);

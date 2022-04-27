@@ -1,11 +1,11 @@
 <?php
-    include '../conexion.php';
+    include '../../controllers/conexion.php';
 
 	$db_conexionREliminar = mysqli_connect($db_host,$db_user,$db_pass,$db_nombre,$port);
 	
 	$id = utf8_decode($_GET["id"]);
 
-	$sqlDelete = "DELETE FROM id17547686_db_clinicaproyecto_2021.rama_medica WHERE id_rama_medica = '$id';";
+	$sqlDelete = "DELETE FROM webapsgt_dbclinicaadmin.rama_medica WHERE id_rama_medica = '$id';";
     
 	if($db_conexionREliminar->query($sqlDelete)==true){
 		/* */

@@ -10,7 +10,7 @@
 	$nueva = $resultado->fetch_assoc();
 
 	             //INSERT INTO clinicaproyecto_2021.habitacion_reservada(id_habitacion,estado) VALUES ('11','Libre');
-	$sqlInserHR = "INSERT INTO id17547686_db_clinicaproyecto_2021.habitacion_reservada(id_habitacion,estado) VALUES ('".$nueva['id_habitacion']."','Libre');";
+	$sqlInserHR = "INSERT INTO webapsgt_dbclinicaadmin.habitacion_reservada(id_habitacion,estado) VALUES ('".$nueva['id_habitacion']."','Libre');";
 	
 	if($dbconexion2->query($sqlInserHR)==true){
 		echo "REGISTRO EXITOSO ";

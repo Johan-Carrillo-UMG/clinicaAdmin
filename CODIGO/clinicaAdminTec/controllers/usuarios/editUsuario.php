@@ -1,5 +1,5 @@
 <?php
-    include '../conexion.php';
+    include '../../controllers/conexion.php';
 
 	$db_conexionUEditar = mysqli_connect($db_host,$db_user,$db_pass,$db_nombre,$port);
 	
@@ -10,7 +10,7 @@
 	$txt_password = utf8_decode($_POST["txt_password"]);
 	$drop_rol = utf8_decode($_POST["drop_rol"]);
 	
-	$sqlUpdate = "UPDATE id17547686_db_clinicaproyecto_2021.usuarios SET email = '".$txt_email."', nombres = '".$txt_nombres."', 
+	$sqlUpdate = "UPDATE webapsgt_dbclinicaadmin.usuarios SET email = '".$txt_email."', nombres = '".$txt_nombres."', 
 				apellidos = '".$txt_apellidos."', password = '".$txt_password."', id_rol = $drop_rol  WHERE usuarios.id_usuario = $idEdit;";
 
 	echo"<br><br><br><br>";

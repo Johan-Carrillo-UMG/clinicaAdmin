@@ -6,7 +6,7 @@
 	$idEdit = utf8_decode($_POST["id"]);
 	$txt_rol = utf8_decode($_POST['txt_rol']);
 	
-	$sqlUpdate = "UPDATE id17547686_db_clinicaproyecto_2021.roles SET rol = '".$txt_rol."' WHERE roles.id_rol = $idEdit;";
+	$sqlUpdate = "UPDATE webapsgt_dbclinicaadmin.roles SET rol = '".$txt_rol."' WHERE roles.id_rol = $idEdit;";
 
 	echo"<br><br><br><br>";
 	if($db_conexionREditar->query($sqlUpdate)==true){

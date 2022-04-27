@@ -1,5 +1,5 @@
 <?php
-	include '../conexion.php';
+	include '../../controllers/conexion.php';
 
 	$db_conexionUInsert = mysqli_connect($db_host,$db_user,$db_pass,$db_nombre,$port);
 	
@@ -11,7 +11,7 @@
 	$txt_fecha = utf8_decode($_POST["txt_fecha"]);
     $drop_puesto = utf8_decode($_POST["drop_puesto"]);
 	
-	$sqlInsertUser =  "INSERT INTO id17547686_db_clinicaproyecto_2021.empleados(codigo, nombres, apellidos, direccion, telefono, fecha_nacimiento, id_puesto) 
+	$sqlInsertUser =  "INSERT INTO webapsgt_dbclinicaadmin.empleados(codigo, nombres, apellidos, direccion, telefono, fecha_nacimiento, id_puesto) 
 						VALUES ('".$txt_codigo."', '".$txt_nombres."', '".$txt_apellidos."', '".$txt_direccion."', '".$txt_telefono."', '".$txt_fecha."', '".$drop_puesto."')";
 	
 	if($db_conexionUInsert->query($sqlInsertUser)==true){

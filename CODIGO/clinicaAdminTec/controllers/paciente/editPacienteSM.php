@@ -1,5 +1,5 @@
 <?php
-    include '../conexion.php';
+    include '../../controllers/conexion.php';
 
 	$db_conexionEdit= mysqli_connect($db_host,$db_user,$db_pass,$db_nombre,$port);
 	
@@ -11,7 +11,7 @@
     $txt_direccion = utf8_decode($_POST["txt_direccion"]);
     $txt_correo = utf8_decode($_POST["txt_correo"]);
 	
-	$sqlUpdate = "UPDATE id17547686_db_clinicaproyecto_2021.pacientes SET nombres = '".$txt_nombres."', apellidos = '".$txt_apellidos."', 
+	$sqlUpdate = "UPDATE webapsgt_dbclinicaadmin.pacientes SET nombres = '".$txt_nombres."', apellidos = '".$txt_apellidos."', 
 	fecha_nacimiento = '".$txt_fecha_nacimiento."', telefono = '".$txt_telefono."', direccion = '".$txt_direccion."', correo_electronico = '".$txt_correo."'  WHERE pacientes.id_paciente = $idEdit;";
 
 	echo"<br><br><br><br>";

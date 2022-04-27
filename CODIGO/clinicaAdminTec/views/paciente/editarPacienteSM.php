@@ -16,13 +16,13 @@ if (!isset($_SESSION['administrador']))
     //USUARIOS
     $db_conexionPEdit = mysqli_connect($db_host, $db_user, $db_pass, $db_nombre, $port);
     $idEdit = utf8_decode($_GET["id"]);
-    $db_conexionPEdit -> real_query("SELECT p.id_paciente as id, p.nombres,p.apellidos, p.fecha_nacimiento, p.telefono, p.direccion, p.correo_electronico FROM id17547686_db_clinicaproyecto_2021.pacientes AS p WHERE p.id_paciente = $idEdit");
+    $db_conexionPEdit -> real_query("SELECT p.id_paciente as id, p.nombres,p.apellidos, p.fecha_nacimiento, p.telefono, p.direccion, p.correo_electronico FROM webapsgt_dbclinicaadmin.pacientes AS p WHERE p.id_paciente = $idEdit");
     $resultadoPEdit = $db_conexionPEdit -> use_result();
     $filaPacienteEdit = $resultadoPEdit -> fetch_assoc();
 
     //MEDICAMENTOS
     $db_conexionMEdit = mysqli_connect($db_host, $db_user, $db_pass, $db_nombre, $port);
-    $db_conexionMEdit->real_query("SELECT id_medicamento AS id, nombre FROM id17547686_db_clinicaproyecto_2021.medicamento;");
+    $db_conexionMEdit->real_query("SELECT id_medicamento AS id, nombre FROM webapsgt_dbclinicaadmin.medicamento;");
     $resultadoMEdit = $db_conexionMEdit->use_result();
 ?>
 

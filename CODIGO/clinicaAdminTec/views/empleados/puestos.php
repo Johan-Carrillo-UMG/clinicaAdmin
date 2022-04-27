@@ -86,7 +86,7 @@ $resultadoR = $db_conexionRoles->use_result();
                             </tr>
                         </thead>
                         <tbody class="text-center">
-                            <?php
+                            <?php                    
                             while ($filaPuesto = $resultadoR->fetch_assoc()) {
                                 echo "<tr data-id=" . $filaPuesto['id'] . ">";
                                 echo "<td>" . $filaPuesto['puesto'] . "</td>";

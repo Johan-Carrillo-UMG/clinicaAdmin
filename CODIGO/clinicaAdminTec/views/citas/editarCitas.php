@@ -60,7 +60,7 @@ if (!isset($_SESSION['administrador']))
 
     //EMPLEADOS
     $db_conexionEmpleados = mysqli_connect($db_host, $db_user, $db_pass, $db_nombre,$port);
-	$db_conexionEmpleados->real_query("SELECT id_empleado, nombres, apellidos FROM id17547686_db_clinicaproyecto_2021.empleados WHERE id_puesto=1 ORDER BY rand() LIMIT 1;");
+	$db_conexionEmpleados->real_query("SELECT id_empleado, nombres, apellidos FROM webapsgt_dbclinicaadmin.empleados WHERE id_puesto=1 ORDER BY rand() LIMIT 1;");
 	$resultadoM = $db_conexionEmpleados->use_result();
 	$filaMedico = $resultadoM->fetch_assoc();
 

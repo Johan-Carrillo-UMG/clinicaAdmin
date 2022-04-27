@@ -19,17 +19,17 @@ if (!isset($_SESSION['administrador']))
 
 	//PACIENTES MEDICADOS
 	$db_conexionPaciente = mysqli_connect($db_host, $db_user, $db_pass, $db_nombre,$port);
-	$db_conexionPaciente->real_query("SELECT p.id_paciente as id, p.nombres,p.apellidos, p.fecha_nacimiento, p.telefono, p.direccion, p.correo_electronico, m.nombre AS nombreMedicamento FROM id17547686_db_clinicaproyecto_2021.pacientes AS p INNER JOIN id17547686_db_clinicaproyecto_2021.medicamento AS m ON p.id_medicamento = m.id_medicamento ORDER BY p.nombres;");
+	$db_conexionPaciente->real_query("SELECT p.id_paciente as id, p.nombres,p.apellidos, p.fecha_nacimiento, p.telefono, p.direccion, p.correo_electronico, m.nombre AS nombreMedicamento FROM webapsgt_dbclinicaadmin.pacientes AS p INNER JOIN webapsgt_dbclinicaadmin.medicamento AS m ON p.id_medicamento = m.id_medicamento ORDER BY p.nombres;");
 	$resultadoP = $db_conexionPaciente->use_result();
 
 	//PACIENTES SIN MEDICAR
 	$db_conexionPacienteS = mysqli_connect($db_host, $db_user, $db_pass, $db_nombre,$port);
-	$db_conexionPacienteS->real_query("SELECT p.id_paciente as id, p.nombres,p.apellidos, p.fecha_nacimiento, p.telefono, p.direccion, p.correo_electronico FROM id17547686_db_clinicaproyecto_2021.pacientes AS p WHERE id_medicamento IS NULL ORDER BY p.nombres;");
+	$db_conexionPacienteS->real_query("SELECT p.id_paciente as id, p.nombres,p.apellidos, p.fecha_nacimiento, p.telefono, p.direccion, p.correo_electronico FROM webapsgt_dbclinicaadmin.pacientes AS p WHERE id_medicamento IS NULL ORDER BY p.nombres;");
 	$resultadoPS = $db_conexionPacienteS->use_result();
 
 	//MEDICAMENTOS
 	$db_conexionMedicamento = mysqli_connect($db_host, $db_user, $db_pass, $db_nombre,$port);
-	$db_conexionMedicamento->real_query("SELECT id_medicamento AS id, nombre AS nombreMedicamento FROM id17547686_db_clinicaproyecto_2021.medicamento;");
+	$db_conexionMedicamento->real_query("SELECT id_medicamento AS id, nombre AS nombreMedicamento FROM webapsgt_dbclinicaadmin.medicamento;");
 	$resultadoM = $db_conexionMedicamento->use_result();
 
 ?>

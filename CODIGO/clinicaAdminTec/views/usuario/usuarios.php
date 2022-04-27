@@ -17,12 +17,12 @@ if (!isset($_SESSION['administrador']))
 
 	//USUARIOS
 	$db_conexionUsuarios = mysqli_connect($db_host, $db_user, $db_pass, $db_nombre,$port);
-	$db_conexionUsuarios->real_query("SELECT u.id_usuario as id, u.email, u.nombres, u.apellidos, u.password, r.rol FROM id17547686_db_clinicaproyecto_2021.usuarios AS u INNER JOIN id17547686_db_clinicaproyecto_2021.roles AS r ON u.id_rol = r.id_rol ORDER BY u.nombres;");
+	$db_conexionUsuarios->real_query("SELECT u.id_usuario as id, u.email, u.nombres, u.apellidos, u.password, r.rol FROM webapsgt_dbclinicaadmin.usuarios AS u INNER JOIN webapsgt_dbclinicaadmin.roles AS r ON u.id_rol = r.id_rol ORDER BY u.nombres;");
 	$resultadoU = $db_conexionUsuarios->use_result();
 
 	//ROLES
 	$db_conexionRoles = mysqli_connect($db_host, $db_user, $db_pass, $db_nombre,$port);
-	$db_conexionRoles->real_query("SELECT id_rol AS id, rol FROM id17547686_db_clinicaproyecto_2021.roles;");
+	$db_conexionRoles->real_query("SELECT id_rol AS id, rol FROM webapsgt_dbclinicaadmin.roles;");
 	$resultadoR = $db_conexionRoles->use_result();
 
 ?>

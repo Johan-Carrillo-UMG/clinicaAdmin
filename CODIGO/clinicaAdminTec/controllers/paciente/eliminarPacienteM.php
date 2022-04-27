@@ -1,5 +1,5 @@
 <?php
-    include '../conexion.php';
+    include '../../controllers/conexion.php';
 
 	$db_conexionEdit= mysqli_connect($db_host,$db_user,$db_pass,$db_nombre,$port);
 	

@@ -16,13 +16,13 @@ require_once '../../controllers/conexion.php';
 
 $db_conexionUEditar = mysqli_connect($db_host, $db_user, $db_pass, $db_nombre, $port);
 $idEdit = utf8_decode($_GET["id"]);
-$db_conexionUEditar->real_query("SELECT e.id_empleado as id, e.codigo, e.nombres, e.apellidos, e.direccion, e.telefono, e.fecha_nacimiento, p.puesto FROM id17547686_db_clinicaproyecto_2021.empleados AS e INNER JOIN id17547686_db_clinicaproyecto_2021.puestos AS p ON e.id_puesto = p.id_puesto  WHERE id_empleado = $idEdit;");
+$db_conexionUEditar->real_query("SELECT e.id_empleado as id, e.codigo, e.nombres, e.apellidos, e.direccion, e.telefono, e.fecha_nacimiento, p.puesto FROM webapsgt_dbclinicaadmin.empleados AS e INNER JOIN webapsgt_dbclinicaadmin.puestos AS p ON e.id_puesto = p.id_puesto  WHERE id_empleado = $idEdit;");
 $resultadoUEdit = $db_conexionUEditar->use_result();
 $filaEmpleadosEdit = $resultadoUEdit->fetch_assoc();
 
 //puestos
 $db_conexionPuestos = mysqli_connect($db_host, $db_user, $db_pass, $db_nombre, $port);
-$db_conexionPuestos->real_query("SELECT id_puesto AS id, puesto FROM id17547686_db_clinicaproyecto_2021.puestos;");
+$db_conexionPuestos->real_query("SELECT id_puesto AS id, puesto FROM webapsgt_dbclinicaadmin.puestos;");
 $resultadoREdit = $db_conexionPuestos->use_result();
 $idEmpleadoR = $resultadoREdit->fetch_assoc();
 

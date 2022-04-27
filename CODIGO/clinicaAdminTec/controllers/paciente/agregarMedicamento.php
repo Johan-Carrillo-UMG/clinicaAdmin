@@ -1,5 +1,5 @@
 <?php
-    include '../conexion.php';
+    include '../../controllers/conexion.php';
 
 	$db_conexionEdit= mysqli_connect($db_host,$db_user,$db_pass,$db_nombre,$port);
 	
@@ -15,10 +15,10 @@
 
 
 	//PACIENTES
-	$sqlUpdate = "UPDATE id17547686_db_clinicaproyecto_2021.pacientes SET id_medicamento = '".$drop_medicamento."' WHERE pacientes.id_paciente = $idEdit;";
+	$sqlUpdate = "UPDATE webapsgt_dbclinicaadmin.pacientes SET id_medicamento = '".$drop_medicamento."' WHERE pacientes.id_paciente = $idEdit;";
 
 	//HISTORIAL_MEDICO
-	$sqlInsertHistorial =  "INSERT INTO id17547686_db_clinicaproyecto_2021.historial_medico(id_paciente,id_empleado,observaciones) 
+	$sqlInsertHistorial =  "INSERT INTO webapsgt_dbclinicaadmin.historial_medico(id_paciente,id_empleado,observaciones) 
                         	VALUES (".$idEdit.",".$drop_medico.",'".$txt_observaciones."')";
 
 

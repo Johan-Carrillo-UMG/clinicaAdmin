@@ -1,5 +1,5 @@
 <?php
-	include '../conexion.php';
+	include '../../controllers/conexion.php';
 
 	$db_conexionPInsert = mysqli_connect($db_host,$db_user,$db_pass,$db_nombre,$port);
 	
@@ -13,7 +13,7 @@
 	$drop_Medicamento = utf8_decode($_POST["drop_Medicamento"]);
     $puestoConvertido = str_replace("0", "NULL", $drop_Medicamento); //Se reemplaza si no se escoge puesto
 
-	$sqlInsertPaciente =  "INSERT INTO id17547686_db_clinicaproyecto_2021.pacientes(nombres, apellidos, fecha_nacimiento,telefono,direccion ,correo_electronico ,id_medicamento) 
+	$sqlInsertPaciente =  "INSERT INTO webapsgt_dbclinicaadmin.pacientes(nombres, apellidos, fecha_nacimiento,telefono,direccion ,correo_electronico ,id_medicamento) 
 					VALUES ('".$txt_nombres."', '".$txt_apellidos."', '".$txt_fecha_nacimiento."', '".$txt_telefono."', '".$txt_direccion."','".$txt_correo."',  ".$puestoConvertido.")";
 	
 	if($db_conexionPInsert->query($sqlInsertPaciente)==true){

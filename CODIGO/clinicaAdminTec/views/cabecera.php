@@ -356,8 +356,6 @@
                     <ul class="collapse list-unstyled" id="pageSubmenu5">
                                     <!-- https://proyectoclinica2021.000webhostapp.com/views/medicamento/medicamento.php -->
                         <li> <a href="/proyectos/clinicaAdminTec/views/medicamento/medicamento.php">Lista de Medicamentos</a> </li>
-                                    <!-- https://proyectoclinica2021.000webhostapp.com/views/lotesMedicina/lotesMedicina.php -->
-                        <li> <a href="/proyectos/clinicaAdminTec/views/lotesMedicina/lotesMedicina.php">Lotes de Medicamentos</a> </li>
                     </ul>
                 </li>
                 <li>

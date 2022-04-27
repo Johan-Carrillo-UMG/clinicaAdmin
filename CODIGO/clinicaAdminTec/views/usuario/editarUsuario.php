@@ -16,13 +16,13 @@ if (!isset($_SESSION['administrador']))
     //USUARIOS
     $db_conexionUEdit = mysqli_connect($db_host, $db_user, $db_pass, $db_nombre, $port);
     $idEdit = utf8_decode($_GET["id"]);
-    $db_conexionUEdit -> real_query("SELECT u.id_usuario as id, u.email, u.nombres, u.apellidos, u.password, r.rol FROM id17547686_db_clinicaproyecto_2021.usuarios AS u INNER JOIN id17547686_db_clinicaproyecto_2021.roles AS r ON u.id_rol = r.id_rol WHERE id_usuario = $idEdit;");
+    $db_conexionUEdit -> real_query("SELECT u.id_usuario as id, u.email, u.nombres, u.apellidos, u.password, r.rol FROM webapsgt_dbclinicaadmin.usuarios AS u INNER JOIN webapsgt_dbclinicaadmin.roles AS r ON u.id_rol = r.id_rol WHERE id_usuario = $idEdit;");
     $resultadoUEdit = $db_conexionUEdit -> use_result();
     $filaUsuariosEdit = $resultadoUEdit -> fetch_assoc();
 
     //ROLES
     $db_conexionREdit = mysqli_connect($db_host, $db_user, $db_pass, $db_nombre, $port);
-    $db_conexionREdit->real_query("SELECT id_rol AS id, rol FROM id17547686_db_clinicaproyecto_2021.roles;");
+    $db_conexionREdit->real_query("SELECT id_rol AS id, rol FROM webapsgt_dbclinicaadmin.roles;");
     $resultadoREdit = $db_conexionREdit->use_result();
     $idUsuarioR = $resultadoREdit->fetch_assoc();
 
