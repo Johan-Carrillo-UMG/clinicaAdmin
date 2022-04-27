@@ -104,9 +104,9 @@ $resultadoM = $db_conexionMedicamento->use_result();
                                 </ul>
                                 <a href="" class="btn btn-block btn-primary agregar-carrito" data-id=<?php echo $filaMedicina['id'] ?>>Comprar</a>
                                 <!--MODAL DETALLES-->
-                                <button class="btn btn-block btn-info" name="btn_modalDetalles" id="btn_modalDetalles" data-toggle="modal" data-target="#modalDetallesProducto<?php echo $filaMedicina['nombre'] ?>">Detalles</button>
+                                <button class="btn btn-block btn-info" name="btn_modalDetalles" id="btn_modalDetalles" data-toggle="modal" data-target="#modalDetallesProducto<?php echo $filaMedicina['id'] ?>">Detalles</button>
                                 <!-- Modal -->
-                                <div class="modal fade" id="modalDetallesProducto<?php echo $filaMedicina['nombre'] ?>" tabindex="1" aria-hidden="true">
+                                <div class="modal fade" id="modalDetallesProducto<?php echo $filaMedicina['id'] ?>" tabindex="1" aria-hidden="true">
                                     <div class="modal-dialog modal-dialog-centered modal-xl">
                                         <div class="modal-content">
                                             <div class="modal-body">
