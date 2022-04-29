@@ -19,17 +19,23 @@ if (!isset($_SESSION['administrador']))
 
 	//PACIENTES MEDICADOS
 	$db_conexionPaciente = mysqli_connect($db_host, $db_user, $db_pass, $db_nombre,$port);
-	$db_conexionPaciente->real_query("SELECT p.id_paciente as id, p.nombres,p.apellidos, p.fecha_nacimiento, p.telefono, p.direccion, p.correo_electronico, m.nombre AS nombreMedicamento FROM webapsgt_dbclinicaadmin.pacientes AS p INNER JOIN webapsgt_dbclinicaadmin.medicamento AS m ON p.id_medicamento = m.id_medicamento ORDER BY p.nombres;");
+	//$db_conexionPaciente->real_query("SELECT p.id_paciente as id, p.nombres,p.apellidos, p.fecha_nacimiento, p.telefono, p.direccion, p.correo_electronico, m.nombre AS nombreMedicamento FROM webapsgt_dbclinicaadmin.pacientes AS p INNER JOIN webapsgt_dbclinicaadmin.medicamento AS m ON p.id_medicamento = m.id_medicamento ORDER BY p.nombres;");
+	$db_conexionPaciente->real_query("SELECT p.id_paciente AS id , p.nombres,p.apellidos, p.fecha_nacimiento, p.telefono, p.direccion, p.email FROM webapsgt_dbclinicaadmin.pacientes as p;");
+	
 	$resultadoP = $db_conexionPaciente->use_result();
 
 	//PACIENTES SIN MEDICAR
 	$db_conexionPacienteS = mysqli_connect($db_host, $db_user, $db_pass, $db_nombre,$port);
-	$db_conexionPacienteS->real_query("SELECT p.id_paciente as id, p.nombres,p.apellidos, p.fecha_nacimiento, p.telefono, p.direccion, p.correo_electronico FROM webapsgt_dbclinicaadmin.pacientes AS p WHERE id_medicamento IS NULL ORDER BY p.nombres;");
+	//$db_conexionPacienteS->real_query("SELECT p.id_paciente as id, p.nombres,p.apellidos, p.fecha_nacimiento, p.telefono, p.direccion, p.correo_electronico FROM webapsgt_dbclinicaadmin.pacientes AS p WHERE id_medicamento IS NULL ORDER BY p.nombres;");
+	$db_conexionPacienteS->real_query("SELECT p.id_paciente as id, p.nombres,p.apellidos, p.fecha_nacimiento, p.telefono, p.direccion, p.email FROM webapsgt_dbclinicaadmin.pacientes AS p  ORDER BY p.nombres;");
+	
 	$resultadoPS = $db_conexionPacienteS->use_result();
 
 	//MEDICAMENTOS
 	$db_conexionMedicamento = mysqli_connect($db_host, $db_user, $db_pass, $db_nombre,$port);
 	$db_conexionMedicamento->real_query("SELECT id_medicamento AS id, nombre AS nombreMedicamento FROM webapsgt_dbclinicaadmin.medicamento;");
+	
+	
 	$resultadoM = $db_conexionMedicamento->use_result();
 
 ?>
@@ -145,8 +151,8 @@ if (!isset($_SESSION['administrador']))
 					echo "<td>" . $filaPaciente['fecha_nacimiento'] . "</td>";
 					echo "<td>" . $filaPaciente['telefono'] . "</td>";
 					echo "<td>" . $filaPaciente['direccion'] . "</td>";
-					echo "<td>" . $filaPaciente['correo_electronico'] . "</td>";
-					echo "<td>" . $filaPaciente['nombreMedicamento'] . "</td>";
+					echo "<td>" . $filaPaciente['email'] . "</td>";
+					//echo "<td>" . $filaPaciente['nombreMedicamento'] . "</td>";
 					echo "<td><a href='../historialMedico/historialMedico.php?id=" . $filaPaciente['id'] . "' class='btn btn-info btn-sm'>Historial Medico</a></td> ";
 					echo "<td><a href='editarPaciente.php?id=" . $filaPaciente['id'] . "' class='btn btn-warning'>Editar</a> 
     							<a href='../../controllers/paciente/eliminarPacienteM.php?id=" . $filaPaciente['id'] . "' class='btn btn-danger'>Eliminar Historial</a></td>";
@@ -184,7 +190,7 @@ if (!isset($_SESSION['administrador']))
 					echo "<td>" . $filaPacienteS['fecha_nacimiento'] . "</td>";
 					echo "<td>" . $filaPacienteS['telefono'] . "</td>";
 					echo "<td>" . $filaPacienteS['direccion'] . "</td>";
-					echo "<td>" . $filaPacienteS['correo_electronico'] . "</td>";
+					echo "<td>" . $filaPacienteS['email'] . "</td>";
 					echo "<td> <a href='agregarMedicamento.php?id=" . $filaPacienteS['id'] . "' class='btn btn-success'>Agregar Medicamento</a> </td>";
 					echo "<td><a href='editarPacienteSM.php?id=" . $filaPacienteS['id'] . "' class='btn btn-warning'>Editar</a> 
     							<a href='../../controllers/paciente/eliminarPaciente.php?id=" . $filaPacienteS['id'] . "' class='btn btn-danger'>Eliminar</a></td>";

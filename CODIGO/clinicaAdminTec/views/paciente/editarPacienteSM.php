@@ -16,7 +16,7 @@ if (!isset($_SESSION['administrador']))
     //USUARIOS
     $db_conexionPEdit = mysqli_connect($db_host, $db_user, $db_pass, $db_nombre, $port);
     $idEdit = utf8_decode($_GET["id"]);
-    $db_conexionPEdit -> real_query("SELECT p.id_paciente as id, p.nombres,p.apellidos, p.fecha_nacimiento, p.telefono, p.direccion, p.correo_electronico FROM webapsgt_dbclinicaadmin.pacientes AS p WHERE p.id_paciente = $idEdit");
+    $db_conexionPEdit -> real_query("SELECT p.id_paciente as id, p.nombres,p.apellidos, p.fecha_nacimiento, p.telefono, p.direccion, p.email FROM webapsgt_dbclinicaadmin.pacientes AS p WHERE p.id_paciente = $idEdit");
     $resultadoPEdit = $db_conexionPEdit -> use_result();
     $filaPacienteEdit = $resultadoPEdit -> fetch_assoc();
 
@@ -81,7 +81,7 @@ if (!isset($_SESSION['administrador']))
                 </div>
                 <div class="mb-3">
                     <label for="lbl_correo" class="lbl_direccion"><b>Correo</b></label>
-                    <input type="text" name="txt_correo" id="txt_correo" class="form-control" value="<?php echo $filaPacienteEdit['correo_electronico']; ?>">
+                    <input type="text" name="txt_correo" id="txt_correo" class="form-control" value="<?php echo $filaPacienteEdit['email']; ?>">
                 </div>
 
                 <div class="mb-3">

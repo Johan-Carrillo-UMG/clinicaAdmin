@@ -13,8 +13,8 @@
 	$drop_Medicamento = utf8_decode($_POST["drop_Medicamento"]);
     $puestoConvertido = str_replace("0", "NULL", $drop_Medicamento); //Se reemplaza si no se escoge puesto
 
-	$sqlInsertPaciente =  "INSERT INTO webapsgt_dbclinicaadmin.pacientes(nombres, apellidos, fecha_nacimiento,telefono,direccion ,correo_electronico ,id_medicamento) 
-					VALUES ('".$txt_nombres."', '".$txt_apellidos."', '".$txt_fecha_nacimiento."', '".$txt_telefono."', '".$txt_direccion."','".$txt_correo."',  ".$puestoConvertido.")";
+	$sqlInsertPaciente =  "INSERT INTO webapsgt_dbclinicaadmin.pacientes(nombres, apellidos, fecha_nacimiento,telefono,direccion ,email ) 
+					VALUES ('".$txt_nombres."', '".$txt_apellidos."', '".$txt_fecha_nacimiento."', '".$txt_telefono."', '".$txt_direccion."','".$txt_correo."')";
 	
 	if($db_conexionPInsert->query($sqlInsertPaciente)==true){
 		$db_conexionPInsert -> close();
