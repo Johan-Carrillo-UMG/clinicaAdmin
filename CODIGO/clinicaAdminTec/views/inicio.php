@@ -98,8 +98,7 @@ if(!isset($_SESSION['administrador'])){
             <br>
             <div class="row">
                 <div class="col-md-4">
-                    <!-- ../tienda -->
-                    <a href="#" style="text-decoration: none; color: black">
+                    <a href="/proyectos/clinicaAdminTec/tienda" style="text-decoration: none; color: black">
                         <div class="container" align="justify" style="background-color: #C1DDE7; width: 100%; border: solid; border-color: black;">
                             <div class="text-center">
                                 <b><font size=5 face="Times New Roman" color="gray">COMPRAR MEDICAMENTO</font></b>
@@ -115,8 +114,7 @@ if(!isset($_SESSION['administrador'])){
                     </a>
                 </div>
                 <div class="col-md-4">
-                    <!-- citas/citas.php -->
-                    <a href="#" style="text-decoration: none; color: black">
+                    <a href="/proyectos/clinicaAdminTec/views/citas/citas.php" style="text-decoration: none; color: black">
                         <div class="container" align="justify" style="background-color: #C1DDE7; width: 100%; border: solid; border-color: black;">
                             <div class="text-center">
                                 <b><font size=5 face="Times New Roman" color="gray">CREAR CITA</font></b>
@@ -132,7 +130,7 @@ if(!isset($_SESSION['administrador'])){
                     </a>
                 </div>
                 <div class="col-md-4">
-                    <a href="#" style="text-decoration: none; color: black">
+                    <a href="/proyectos/clinicaAdminTec/views/us.php" style="text-decoration: none; color: black">
                         <div class="container" align="justify" style="background-color: #C1DDE7; width: 100%; border: solid; border-color: black;">
                             <div class="text-center">
                                 <b><font size=5 face="Times New Roman" color="gray">NOSOTROS</font></b>

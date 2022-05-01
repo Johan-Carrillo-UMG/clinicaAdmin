@@ -230,14 +230,12 @@
                 <li class="active">
                     <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Citas</a>
                     <ul class="collapse list-unstyled" id="homeSubmenu">
-                                    <!-- https://proyectoclinica2021.000webhostapp.com/views/citas/citas.php --> 
-                        <li> <a href="#">Solicitar Cita</a> </li>
+                        <li> <a href="/proyectos/clinicaAdminTec/views/citas/citas.php">Solicitar Cita</a> </li>
                     </ul>
                 </li>
                 <li class="active">
                     <a href="#homeSubmenu2" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Tienda</a>
                     <ul class="collapse list-unstyled" id="homeSubmenu2">
-                                    <!-- https://proyectoclinica2021.000webhostapp.com/tienda/index.php -->
                         <li> <a href="/proyectos/clinicaAdminTec/tienda">Comprar Productos</a> </li>
                     </ul>
                 </li>
@@ -308,27 +306,21 @@
                 <li class="active">
                     <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Usuarios</a>
                     <ul class="collapse list-unstyled" id="homeSubmenu">
-                                    <!-- https://proyectoclinica2021.000webhostapp.com/views/usuario/usuarios.php -->
                         <li> <a href="/proyectos/clinicaAdminTec/views/usuario/usuarios.php">Lista de Usuarios</a> </li>
-                                    <!-- https://proyectoclinica2021.000webhostapp.com/views/roles/roles.php -->
                         <li> <a href="/proyectos/clinicaAdminTec/views/roles/roles.php">Roles de Usuario</a> </li>
                     </ul>
                 </li>
                 <li>
                     <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Citas</a>
                     <ul class="collapse list-unstyled" id="pageSubmenu">
-                                    <!-- https://proyectoclinica2021.000webhostapp.com/views/citas/citas.php -->
                         <li> <a href="/proyectos/clinicaAdminTec/views/citas/citas.php">Lista de Citas</a> </li>
-                                    <!-- https://proyectoclinica2021.000webhostapp.com/views/ramaMedica/ramaMedica.php -->
                         <li> <a href="/proyectos/clinicaAdminTec/views/ramaMedica/ramaMedica.php">Ramas Medicas</a> </li>
                     </ul>
                 </li>
                 <li>
                     <a href="#pageSubmenu2" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Empleados</a>
                     <ul class="collapse list-unstyled" id="pageSubmenu2">
-                                    <!-- https://proyectoclinica2021.000webhostapp.com/views/empleados/personas.php -->
                         <li> <a href="/proyectos/clinicaAdminTec/views/empleados/personas.php">Lista de Empleados</a> </li>
-                                    <!-- https://proyectoclinica2021.000webhostapp.com/views/empleados/puestos.php -->
                         <li> <a href="/proyectos/clinicaAdminTec/views/empleados/puestos.php">Puestos de Empleados</a>
                         </li>
                     </ul>
@@ -336,7 +328,6 @@
                 <li>
                     <a href="#pageSubmenu3" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pacientes</a>
                     <ul class="collapse list-unstyled" id="pageSubmenu3">
-                                    <!-- https://proyectoclinica2021.000webhostapp.com/views/paciente/paciente.php -->
                         <li> <a href="/proyectos/clinicaAdminTec/views/paciente/paciente.php">Listado de Pacientes</a> </li>
                         <li> <a href="#">Historial médico</a>
                         </li>
@@ -345,26 +336,19 @@
                 <li>
                     <a href="#pageSubmenu4" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Sucursales</a>
                     <ul class="collapse list-unstyled" id="pageSubmenu4">
-                                    <!-- https://proyectoclinica2021.000webhostapp.com/views/sucursales/sucursales.php -->
                         <li> <a href="/proyectos/clinicaAdminTec/views/sucursales/sucursales.php">Lista de Sucursales</a> </li>
-                                    <!-- https://proyectoclinica2021.000webhostapp.com/views/habitaciones/habitaciones.php -->
-                        <!-- <li> <a href="/proyectos/clinicaAdminTec/views/habitaciones/habitaciones.php">Habitaciones de Sucursales</a> </li> -->
                     </ul>
                 </li>
                 <li>
                     <a href="#pageSubmenu5" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Medicamento</a>
                     <ul class="collapse list-unstyled" id="pageSubmenu5">
-                                    <!-- https://proyectoclinica2021.000webhostapp.com/views/medicamento/medicamento.php -->
                         <li> <a href="/proyectos/clinicaAdminTec/views/medicamento/medicamento.php">Lista de Medicamentos</a> </li>
                     </ul>
                 </li>
                 <li>
                     <a href="#pageSubmenu6" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Ventas</a>
                     <ul class="collapse list-unstyled" id="pageSubmenu6">
-                        <li>
-                                    <!-- https://proyectoclinica2021.000webhostapp.com/tienda/index.php -->
-                            <a href="/proyectos/clinicaAdminTec/tienda">Tienda</a>
-                        </li>
+                        <li> <a href="/proyectos/clinicaAdminTec/tienda">Tienda</a> </li>
                     </ul>
                 </li>
 
