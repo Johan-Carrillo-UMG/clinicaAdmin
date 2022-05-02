@@ -13,7 +13,8 @@
 	$drop_Medicamento = utf8_decode($_POST["drop_Medicamento"]);
 	
 	$sqlUpdate = "UPDATE webapsgt_dbclinicaadmin.pacientes SET nombres = '".$txt_nombres."', apellidos = '".$txt_apellidos."', 
-	fecha_nacimiento = '".$txt_fecha_nacimiento."', telefono = '".$txt_telefono."', direccion = '".$txt_direccion."', correo_electronico = '".$txt_correo."', id_medicamento = $drop_Medicamento  WHERE pacientes.id_paciente = $idEdit;";
+	fecha_nacimiento = '".$txt_fecha_nacimiento."', telefono = '".$txt_telefono."', direccion = '".$txt_direccion."', 
+	email = '".$txt_correo."' WHERE pacientes.id_paciente = $idEdit;";
 
 	echo"<br><br><br><br>";
 	if($db_conexionEdit->query($sqlUpdate)==true){

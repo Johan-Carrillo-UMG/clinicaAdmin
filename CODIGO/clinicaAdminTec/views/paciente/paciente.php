@@ -127,7 +127,7 @@ if (!isset($_SESSION['administrador']))
 			<A name="PM"><h3 class="text-center">Pacientes Medicados</h3></A>
         </div>
         <div style="padding:10px; background-color: white; width: 100%;">
-			<A href="#PPM" class="btn btn-success">Pacientes Por Medicar</A>
+			
             <table class="table table-striped table-inverse table-responsive">
 			<thead class="thead-inverse">
 				<tr>
@@ -163,44 +163,8 @@ if (!isset($_SESSION['administrador']))
 			</tbody>
 			</table>
 		</div>
-		<div style="padding:10px; background-color: #1B1F78; color:white; margin-top: 2em;">
-		<A name="PPM"><h3 class="text-center">Pacientes por Medicar</h3></A>
-        </div>
-        <div style="padding:10px; background-color: white; width: 100%;">
-			<A href="#PM" class="btn btn-success">Pacientes Medicados</A>
-            <table class="table table-striped table-inverse table-responsive">
-			<thead class="thead-inverse">
-				<tr>
-					<th>Nombres</th>
-					<th>Apellidos</th>
-					<th>FechaNacimiento</th>
-					<th>Telefono</th>
-					<th>Direccion</th>
-					<th>Correo </th>
-					<th>Medicamento</th>
-					<th>Acciones</th>
-				</tr>
-			</thead>
-			<tbody>
-				<?php
-				while ($filaPacienteS = $resultadoPS->fetch_assoc()) {
-					echo "<tr data-id=" . $filaPacienteS['id'] . ">";
-					echo "<td>" . $filaPacienteS['nombres'] . "</td>";
-					echo "<td>" . $filaPacienteS['apellidos'] . "</td>";
-					echo "<td>" . $filaPacienteS['fecha_nacimiento'] . "</td>";
-					echo "<td>" . $filaPacienteS['telefono'] . "</td>";
-					echo "<td>" . $filaPacienteS['direccion'] . "</td>";
-					echo "<td>" . $filaPacienteS['email'] . "</td>";
-					echo "<td> <a href='agregarMedicamento.php?id=" . $filaPacienteS['id'] . "' class='btn btn-success'>Agregar Medicamento</a> </td>";
-					echo "<td><a href='editarPacienteSM.php?id=" . $filaPacienteS['id'] . "' class='btn btn-warning'>Editar</a> 
-    							<a href='../../controllers/paciente/eliminarPaciente.php?id=" . $filaPacienteS['id'] . "' class='btn btn-danger'>Eliminar</a></td>";
-					echo "</tr>";
-				}
-				$db_conexionPacienteS->close();
-				?>
-			</tbody>
-			</table>
-		</div>
+		
+        
 
 	<?php
 		

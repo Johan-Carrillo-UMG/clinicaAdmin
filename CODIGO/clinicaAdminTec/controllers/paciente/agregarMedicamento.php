@@ -15,7 +15,7 @@
 
 
 	//PACIENTES
-	$sqlUpdate = "UPDATE webapsgt_dbclinicaadmin.pacientes SET id_medicamento = '".$drop_medicamento."' WHERE pacientes.id_paciente = $idEdit;";
+	$sqlUpdate = "UPDATE webapsgt_dbclinicaadmin.historial_medico SET id_receta_medica = '".$drop_medicamento."' WHERE webapsgt_dbclinicaadmin.historial_medico.id_paciente = $idEdit;";
 
 	//HISTORIAL_MEDICO
 	$sqlInsertHistorial =  "INSERT INTO webapsgt_dbclinicaadmin.historial_medico(id_paciente,id_empleado,observaciones) 

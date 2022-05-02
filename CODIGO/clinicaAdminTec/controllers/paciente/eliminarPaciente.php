@@ -6,7 +6,7 @@
 	$id = utf8_decode($_GET["id"]);
 
 	$sqlDelete = "DELETE FROM pacientes WHERE id_paciente = '$id';";
-									  
+	//$sqlDelete = "DELETE FROM historial_medico WHERE historial_medico.id_paciente = '$id';";								  
 	if($db_conexionPEliminar->query($sqlDelete)==true){
 	
 	} else {
