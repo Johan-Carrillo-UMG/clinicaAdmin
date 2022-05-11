@@ -23,13 +23,13 @@
     
 
 	//INSERT PACIENTES
-	$sqlInsertPaciente =  "INSERT INTO webapsgt_dbclinicaadmin.pacientes(nombres,apellidos,fecha_nacimiento,telefono,direccion,correo_electronico) 
+	$sqlInsertPaciente =  "INSERT INTO webapsgt_dbclinicaadmin.pacientes(nombres,apellidos,fecha_nacimiento,telefono,direccion,email) 
                             VALUES ('".$txt_nombres."','".$txt_apellidos."','".$txt_fn."','".$txt_telefono."','".$txt_direccion."','".$txt_email."')";
 
     //INSERT CITAS
     $sqlInsertCita =  "INSERT INTO webapsgt_dbclinicaadmin.citas(id_rama_medica,id_empleado,sintomas,fecha_hora) 
                         VALUES (".$drop_rama.",".$txt_id_medico.",'".$txt_sintomas."','".$fecha_convertida."')";
-  
+    
     
     
     if($db_conexionPCInsert->query($sqlInsertPaciente)==true){
@@ -51,8 +51,9 @@
                 $idCita = $filaCitas['id'];
             }
             
+            
             //INSERT DETALLE_CITAS
-            $sqlInsertDetalleCitas = "INSERT INTO detalle_citas (id_sucursal, id_paciente, id_cita, id_usuario) VALUES (".$drop_sucursal.", ".$idPaciente.", ".$idCita.",5);";
+            $sqlInsertDetalleCitas = "INSERT INTO detalle_citas (id_sucursal, id_paciente, id_cita, id_usuario) VALUES (".$drop_sucursal.", ".$idPaciente.", ".$idCita.",1);";
     
             if($db_conexionPCInsert -> query($sqlInsertDetalleCitas) == true){
                 $db_conexionPCInsert -> close();

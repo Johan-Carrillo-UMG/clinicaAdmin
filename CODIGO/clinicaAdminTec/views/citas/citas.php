@@ -19,7 +19,7 @@ if (!isset($_SESSION['administrador']))
 
 	//Citas
 	$db_conexionCitas = mysqli_connect($db_host, $db_user, $db_pass, $db_nombre,$port);
-	$db_conexionCitas->real_query("SELECT c.id_cita as id, rm.rama, e.nombres, c.sintomas, c.fecha_hora FROM citas as c INNER JOIN webapsgt_dbclinicaadmin.rama_medica AS rm ON c.id_rama_medica = rm.id_rama_medica INNER JOIN webapsgt_dbclinicaadmin.empleados as e oN c.id_empleado = e.id_empleado;");
+	$db_conexionCitas->real_query("SELECT c.id_cita as id, rm.rama, concat(e.nombres,' ', e.apellidos) as nombres, c.sintomas, c.fecha_hora FROM citas as c INNER JOIN webapsgt_dbclinicaadmin.rama_medica AS rm ON c.id_rama_medica = rm.id_rama_medica INNER JOIN webapsgt_dbclinicaadmin.empleados as e oN c.id_empleado = e.id_empleado;");
 	$resultadoC = $db_conexionCitas->use_result();
 
 	//RamasMedicas

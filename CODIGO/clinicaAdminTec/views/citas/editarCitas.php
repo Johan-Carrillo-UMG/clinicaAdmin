@@ -27,7 +27,7 @@ if (!isset($_SESSION['administrador']))
                                           pacientes.fecha_nacimiento,
                                           pacientes.telefono,
                                           pacientes.direccion,
-                                          pacientes.correo_electronico,
+                                          pacientes.email,
                                           citas.id_cita,
                                           rama_medica.rama,
                                           citas.sintomas,
@@ -116,7 +116,7 @@ if (!isset($_SESSION['administrador']))
                     </div>
                     <div class="col-md-6">
                         <span><b>Email</b></span>
-                        <input class="form-control" type="text" name="txt_email" id="txt_email" value="<?php echo $filaCitas['correo_electronico'];?>" required>
+                        <input class="form-control" type="text" name="txt_email" id="txt_email" value="<?php echo $filaCitas['email'];?>" required>
                     </div>
                 </div>
 				<br><br>

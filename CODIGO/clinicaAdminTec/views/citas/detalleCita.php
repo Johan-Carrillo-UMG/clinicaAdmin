@@ -28,12 +28,12 @@ if (!isset($_SESSION['administrador']))
                                                 pacientes.fecha_nacimiento,
                                                 pacientes.telefono,
                                                 pacientes.direccion,
-                                                pacientes.correo_electronico, 
+                                                pacientes.email, 
                                                 sucursales.nombre AS sucursal,
                                                 citas.sintomas,
                                                 citas.fecha_hora,
                                                 rama_medica.rama,
-                                                empleados.nombres AS nombre_empleado,
+                                                concat(empleados.nombres,' ',empleados.apellidos) AS nombre_empleado,
                                                 usuarios.nombres AS nombre_usuario
                                                 FROM citas
                                                 INNER JOIN detalle_citas
@@ -105,7 +105,7 @@ if (!isset($_SESSION['administrador']))
                     </div>
                     <div class="col-md-6">
                         <label for="lbl_paciente" class="form-label"><b>Correo electrónico</b></label>
-                        <input type="text" name="txt_correo" id="txt_correo" class="form-control" value="<?php echo $filaDCEdit['correo_electronico']; ?>" disabled>
+                        <input type="text" name="txt_correo" id="txt_correo" class="form-control" value="<?php echo $filaDCEdit['email']; ?>" disabled>
                     </div>
                     <div class="col-md-6">
                         <label for="lbl_paciente" class="form-label"><b>Sintomas del paciente</b></label>
