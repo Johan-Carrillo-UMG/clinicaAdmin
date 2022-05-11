@@ -52,24 +52,24 @@ if(!isset($_SESSION['administrador'])){
                                     <td>Sara Maria Nataly Ovalle Perez</td>
                                 </tr>
                                 <tr>
-                                    <td>1290-18-8728</td>
-                                    <td>-----</td>
-                                    <td>Johan Estuardo Carrillo Berducido</td>
-                                </tr>
-                                <tr>
-                                    <td>1290-18-23967</td>
-                                    <td>-----</td>
-                                    <td>Jhensser Andreé Aguirre Galdámez</td>
-                                </tr>
-                                <tr>
                                     <td>1290-18-5747</td>
                                     <td>-----</td>
                                     <td>Mario Haroldo Sinay Gaytán</td>
                                 </tr>
                                 <tr>
+                                    <td>1290-18-8728</td>
+                                    <td>-----</td>
+                                    <td>Johan Estuardo Carrillo Berducido</td>
+                                </tr>
+                                <tr>
                                     <td>1290-18-17071</td>
                                     <td>-----</td>
                                     <td>Jorge Luis Muñoz Elías</td>
+                                </tr>
+                                <tr>
+                                    <td>1290-18-23967</td>
+                                    <td>-----</td>
+                                    <td>Jhensser Andreé Aguirre Galdámez</td>
                                 </tr>
                             </table>
                         </div>
