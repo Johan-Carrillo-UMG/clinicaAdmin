@@ -6,7 +6,7 @@
 	//PACIENTES
 	$db_conexionHPaciente = mysqli_connect($db_host, $db_user, $db_pass, $db_nombre,$port);
     $idEdit = utf8_decode($_GET["id"]);
-	$db_conexionHPaciente->real_query("SELECT hm.id_paciente as id, p.nombres AS nombrePaciente, e.nombres AS nombreMedico, hm.observaciones FROM webapsgt_dbclinicaadmin.historial_medico 
+	$db_conexionHPaciente->real_query("SELECT hm.id_paciente as id, p.nombres AS nombrePaciente, e.nombres AS nombreMedico, hm.observaciones FROM webapsgt_dbclinicaadmin.historial_med 
 										AS hm INNER JOIN webapsgt_dbclinicaadmin.pacientes AS p ON hm.id_paciente = p.id_paciente INNER JOIN webapsgt_dbclinicaadmin.empleados AS 
 										e ON hm.id_empleado = e.id_empleado WHERE hm.id_paciente = $idEdit;");
 	$resultadoP = $db_conexionHPaciente->use_result();
@@ -14,7 +14,7 @@
 	//NOMBRE
 	$db_conexionHN = mysqli_connect($db_host, $db_user, $db_pass, $db_nombre,$port);
     $idEditN = utf8_decode($_GET["id"]);
-	$db_conexionHN->real_query("SELECT hm.id_paciente as id, p.nombres AS nombrePaciente, e.nombres AS nombreMedico, hm.observaciones FROM webapsgt_dbclinicaadmin.historial_medico 
+	$db_conexionHN->real_query("SELECT hm.id_paciente as id, p.nombres AS nombrePaciente, e.nombres AS nombreMedico, hm.observaciones FROM webapsgt_dbclinicaadmin.historial_med 
 										AS hm INNER JOIN webapsgt_dbclinicaadmin.pacientes AS p ON hm.id_paciente = p.id_paciente INNER JOIN webapsgt_dbclinicaadmin.empleados AS 
 										e ON hm.id_empleado = e.id_empleado WHERE hm.id_paciente = $idEditN;");
 	$resultadoPN = $db_conexionHN->use_result();
@@ -58,7 +58,7 @@ if (!isset($_SESSION['administrador']))
         </div>
         <div style="padding:10px; background-color: white; width: 100%;">
             <form action="" method="POST">
-                <input type="hidden" name="id" id="id" value="<?php echo $filaDCEditN['id']; ?>">
+                <input type="hidden" name="id" id="id" value="<?php echo $idEditN; ?>">
 				<?php while ($filaDCEdit = $resultadoP->fetch_assoc()) { ?>
                 <div class="row">
                     <div class="col-md-6">
@@ -75,7 +75,7 @@ if (!isset($_SESSION['administrador']))
                 
                 <div style="margin-top: 1em;">
                     <a href="../paciente/paciente.php" class="btn btn-success">Regresar</a> &nbsp;&nbsp;
-                    <a href="../paciente/agregarMedicamento.php?id=<?php echo $filaDCEditN['id']; ?>"  class='btn btn-success'>Agregar Otro Medicamento</a>
+                    <a href="../paciente/agregarMedicamento.php?id=<?php echo $idEditN; ?>"  class='btn btn-success'>Agregar Otro Medicamento</a>
                 </div>
             </form>
         </div>

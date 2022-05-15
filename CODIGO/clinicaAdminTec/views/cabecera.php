@@ -329,7 +329,6 @@
                     <a href="#pageSubmenu3" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pacientes</a>
                     <ul class="collapse list-unstyled" id="pageSubmenu3">
                         <li> <a href="/proyectos/clinicaAdminTec/views/paciente/paciente.php">Listado de Pacientes</a> </li>
-                        <li> <a href="#">Historial médico</a>
                         </li>
                     </ul>
                 </li>
